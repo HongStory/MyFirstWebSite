@@ -36,7 +36,8 @@ h1{
 }
 
 body{
-    overflow-x: hidden
+    margin: 0px;
+    overflow-x: hidden;
 }
 
 p{
