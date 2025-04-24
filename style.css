@@ -4,8 +4,8 @@ header{
 }
 nav{
     /* border-right: 1px solid white; */
-    width: 170px;
-    height: 600px;
+    width: 130px;
+    height: 1000px;
     float: left;
 }
 article{
@@ -24,19 +24,21 @@ h2{
 #control{
     float:right;
     
-}
-
-body.white{
-    background-color: white;
-    color:black;
-}
-
-body.black{
-    background-color: black;
-    color: white;
+    
 }
 
 header img{
     float: right;
     width: 100px;
+}
+h1{
+    text-align: center;
+}
+
+body{
+    overflow-x: hidden
+}
+
+p{
+    width: 410px;
 }

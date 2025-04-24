@@ -1,4 +1,3 @@
-
 var borderColor = document.querySelector('nav');
 var links = {
     selectColor : function (color) {
