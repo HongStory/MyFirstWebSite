@@ -19,6 +19,7 @@
         <li><a href="page_mysql.html"> Mysql is </a></li>
         <li><a href="page_nodejs.html"> Nodejs is </a></li>
         <li><a href="page_react.html"> React is </a></li>
+        <li><a href="page_git.html"> Git is </a></li>
         </ol>
     </nav>
 
@@ -35,6 +36,15 @@
             drop = DROP DATABASE name;<br>
             show = SHOW DATABASES;<br>
             use = USE name;<br>
+            create table = CREATE TABLE name(
+            id INT(11) NOT NULL AUTO_INCREMENT,<br>
+            title VARCHAR(100) NOT NULL,<br>
+            description TEXT NULL,<br>
+            created DATETIME NOT NULL,<br>
+            author VARCHAR(30) NULL,<br>
+            profile VARCHAR(100) NULL,<br>
+            PRIMARY KEY(id)<br>
+            );<br>
         </P>
     </article>
 
