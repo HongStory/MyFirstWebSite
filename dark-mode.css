@@ -1,9 +1,14 @@
 body {
     color: white;
     background-color: black;
+    width: 100%;
+    overflow-x: hidden;  
+    margin: 0;  
+    
 }
 
 header{
+    border-top: 3px solid gray;
     border-bottom: 3px solid gray;
     padding: 20px;
     background-color: antiquewhite;
@@ -40,18 +45,13 @@ h2{
 header img{
     float: left;
     width: 70px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 /* header{
     background-color: rgb(42, 39, 39)
 } */
 h1{
     text-align: center;
-}
-
-body{
-    margin: 0px;
-    overflow-x: hidden;
 }
 
 p{
