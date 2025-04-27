@@ -1,4 +1,10 @@
 var borderColor = document.querySelector('nav');
+var navBackgroundColor = document.querySelector('nav');
+var headerBackgroundColor = document.querySelector('header');
+var bodyBackgroundColor = document.querySelector('body');
+var input = document.querySelector('input');
+
+
 var links = {
     selectColor : function (color) {
 let links = document.querySelectorAll('a');
@@ -10,37 +16,68 @@ let i = 0;
 }
 }
 
- var Body = {
-  setbackground : function (color) {
-  document.querySelector('body').style.backgroundColor = color;  
-},
- setcolor : function (color) {
-  document.querySelector('body').style.color = color;
-}
-}
+//  var Body = {
+//   setBackground : function (color) {
+//   document.querySelector('body').style.backgroundColor = color;  
+// },
+//  setColor : function (color) {
+//   document.querySelector('body').style.color = color;
+// }
+// }
 
 
-function night_day(self){
+// function night_day(self){
 
-if ( self.value ==='black') {
+// if ( self.value ==='black') {
 
-  Body.setbackground('black');
-  Body.setcolor('white');
-  self.value = 'white';
-  borderColor.style = 'border-right: 1px solid black';  
+//   Body.setBackground('black');
+//   Body.setColor('white');
+//   self.value = 'white';
+//   // borderColor.style = 'border-right: 1px solid black';
+//   navBackgroundColor.style = 'background-color : black';
+//   headerBackgroundColor.style = 'background-color : black';  
 
-links.selectColor('powderblue');
+// links.selectColor('powderblue');
 
-}else{
-  Body.setbackground('white');
-  Body.setcolor('black');
-  self.value = 'black';
-  borderColor.style = 'border-right: 1px solid white';
+// }else{
+//   Body.setBackground('white');
+//   Body.setColor('black');
+//   self.value = 'black';
+//   // borderColor.style = 'border-right: 1px solid white';
+//   navBackgroundColor.style = 'background-color: rgb(203, 221, 221)';
+//   headerBackgroundColor.style = 'background-color : antiquewhite';
 
+// links.selectColor('blue');
+// }
+// }
 
-links.selectColor('blue');
-}
-}
-function sum(params,params2) {
-document.write(params+params2*10);
-}
+var css = document.querySelector("#css-link");
+        var darkModeYn = localStorage["dark"];
+        loadMode();
+        
+        function loadMode(){
+            if (darkModeYn == "Y"){
+                css.setAttribute('href', "dark-mode.css")
+                links.selectColor('powderblue');
+                navBackgroundColor.style = 'background-color : black';
+                headerBackgroundColor.style = 'background-color : black';
+                input.value = 'DarkModOff';
+                
+            } else {
+                css.setAttribute('href', "light-mode.css")
+                input.value = 'DarkModOn';
+            }
+        }
+
+        function changeMode(){
+            if (darkModeYn == "N"){
+                localStorage["dark"] = 'Y' 
+                
+            } else {
+                localStorage["dark"] = 'N'
+                
+            }
+
+            location.reload(); 
+            // 웹페이지 새로고침
+        }

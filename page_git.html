@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="light-mode.css" id="css-link">
 </head>
 <body id="target">
     <header>
+        <img src="logo.webp"/>
         <h1><a href="index.html">My First Web Site!</a></h1>
     </header>
 
@@ -24,7 +25,7 @@
     </nav>
 
     <div id = "control">
-        <input type="button" value="black" onclick="night_day(this);"/>
+        <input type="button" value="DarkModOn" onclick="changeMode();"/>
     </div>
 
     <article>
@@ -65,7 +66,7 @@
         <li>git reset -hard</li>
         <li>git log -p</li>
         <li>q</li>
-        <li>git checkout version name</li>
+        <li>git checkout version name(commit id)</li>
         <li>git checkout master</li>
         <li>git add .</li>
         <li>git add directory name</li>
@@ -73,9 +74,9 @@
         <li>touch filename.txt"</li>
         <li>git config --global core.editor "nano"</li>
         <li>git commit</li>
-        <li>git reset --hard version name</li>
+        <li>git reset --hard version name(commit id)</li>
         <li>git reset --help</li>
-        <li>git revert version name</li>
+        <li>git revert version name(commit id)</li>
         </ul>
     </article>
     <script src="script.js"></script>

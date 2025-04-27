@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Web Site!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="light-mode.css" id="css-link">
 </head>
 <body>
     <header>
-        <h1>My First Web Site! </h1>
+        <img src="logo.webp"/>
+        <h1><a href ="index.html">My First Web Site! </h1>
     </header>
 
     <nav>
@@ -20,11 +21,13 @@
         <li><a href="page_nodejs.html"> Nodejs is </a></li>
         <li><a href="page_git.html"> Git is </a></li>
         <li><a href="page_react.html"> React is </a></li>
-        </ul>
+        </ol>
     </nav>
 
     <div id = "control">
-        <input type="button" value="black" onclick="night_day(this);"/>
+        <input type="button" value="DarkModOn" onclick="changeMode();"/>
+        
+        
     </div>
     <script src="script.js"></script>
     
