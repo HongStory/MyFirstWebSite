@@ -14,16 +14,16 @@ header{
 header div{
     margin-top: -15px;
 }
-nav{
+/* nav{
     border-right: 3px solid gray;
     width: 140px;
-    /* height: 2000px; */
+    height: 2000px;
     float: left;
-    /* margin-left: 20px; */
+    margin-left: 20px;
     margin-right: 20px;
     background-color: rgb(203, 221, 221)
     
-}
+} */
 article{
     
     padding: 20px;
@@ -74,13 +74,20 @@ footer{
 }
 .content nav{
     border-right:3px solid gray;
+
+    /* width: 20px; */
+    /* height: 2000px; */
+    /* float: left; */
+    /* margin-left: 20px; */
+    margin-right: 10px;
+    background-color: rgb(203, 221, 221)
     
 }
 .content aside{
     border-left:1px solid gray;    
 }
 nav, aside{
-    flex-basis: 150px;
+    flex-basis: 100px;
     flex-shrink: 0;
 }
 main{
