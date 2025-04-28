@@ -16,6 +16,7 @@
         <h1><a href ="index.html">My First Web Site!</h1>
             
     </header>
+    
     <section class="content">
     <nav>
         <ol>
@@ -38,8 +39,8 @@
             <li>show => SHOW DATABASES;</li>
             <li>use => USE database name;</li>
             <h3>CREATE</h3>
-            <li>create table => CREATE TABLE name(
-            id INT(11) NOT NULL AUTO_INCREMENT,<br>
+            <li>create table =><br> CREATE TABLE name(
+            id INT(11) NOT NULL<br> AUTO_INCREMENT,<br>
             title VARCHAR(100) NOT NULL,<br>
             description TEXT NULL,<br>
             created DATETIME NOT NULL,<br>
@@ -49,7 +50,7 @@
             );</li>
             <li>DESC table name;</li>
             <li>INSERT INTO table name<br>
-            (title,description,created,author,profile)<br>
+            (title,description,created,<br>author,profile)<br>
             VALUES('MySQL','MySQL is',NOW(),<br>
             'user name','user profile');</li>
             <h3>READ</h3>
@@ -57,19 +58,19 @@
             <li>SELECT id,title,created FROM table name;</li>
             <li>SELECT id,title FROM table name;</li>
             <li>SELECT "author name";</li>
-            <li>SELECT * FROM table name WHERE author = 'name';</li>
-            <li>SELECT * FROM table name WHERE author = 'name' ORDER BY id DESC;</li>
-            <li>SELECT * FROM table name WHERE author = 'name' ORDER BY id DESC LIMIT 2;</li>
+            <li>SELECT * FROM table name <br>WHERE author = 'name';</li>
+            <li>SELECT * FROM table name <br>WHERE author = 'name' <br>ORDER BY id DESC;</li>
+            <li>SELECT * FROM table name <br>WHERE author = 'name' <br>ORDER BY id DESC LIMIT 2;</li>
             <h3>UPDATE</h3>
             <li>Very important "WHERE" !!</li>
-            <li>UPDATE table name SET description='new description', title='new title' WHERE id=2;</li>
+            <li>UPDATE table name SET description=<br>'new description', title='new title' WHERE id=2;</li>
             <h3>Delete</h3>
             <li>Very important "WHERE" !!</li>
             <li>DELETE FROM table name WHERE id = 5;</li>
             <h3>Relational Database</h3>
-            <li>SELECT * FROM table name1 LEFT JOIN table name2 ON table name1.author_id=table name2.id;</li>
-            <li>SELECT table name1.id,title,description,created,name,profile FROM table name1 LEFT JOIN table name2 ON table name1.author_id=table name2.id;</li>
-            <li>SELECT table name1.id AS table name1_id,title,description,created,name,profile FROM table name1 LEFT JOIN table name2 ON table name1.author_id=table name2.id;</li>
+            <li>SELECT * FROM table name1 LEFT JOIN <br>table name2 ON table name1.author_id=table name2.id;</li>
+            <li>SELECT table name1.id,title,description,<br>created,name,profile FROM table name1 LEFT JOIN table name2 ON <br>table name1.author_id=<br>table name2.id;</li>
+            <li>SELECT table name1.id AS table name1_id,<br>title,description,created,name,<br>profile FROM table name1 <br>LEFT JOIN table name2 <br>ON table name1.author_id=table name2.id;</li>
             <h3>Database Client</h3>
             <li>mysql workbench</li>
         </ul>
