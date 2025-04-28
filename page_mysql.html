@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta content="yes" name="apple-mobile-web-app-capable" />  
-    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MySQL</title>
     <link rel="stylesheet" href="light-mode.css" id="css-link">
 </head>
-<body id="target">
+<body>
+    <div class="container">
     <header>
+        <div id = "control">
+            <input type="button" value="DarkModOn" onclick="changeMode();"/>
+        </div>
         <img src="logo.webp"/>
-        <h1><a href="index.html">My First Web Site!</a></h1>
+        <h1><a href ="index.html">My First Web Site!</h1>
+            
     </header>
-
+    <section class="content">
     <nav>
         <ol>
         <li><a href="page_html.html"> HTML is </a></li>
@@ -25,14 +28,9 @@
         <li><a href="page_react.html"> React is </a></li>
         </ol>
     </nav>
-
-    <div id = "control">
-        <input type="button" value="DarkModOn" onclick="changeMode();"/>
-    </div>
-    <script src="script.js"></script>
     
-    <article>
-        <h2>SQL Language</h2>
+         <main>
+            <h2>SQL Language</h2>
         <ul>
             <li>cmd => bin ./mysql -uroot -p</li>
             <li>create => CREATE DATABASE name;</li>
@@ -76,9 +74,14 @@
             <li>mysql workbench</li>
         </ul>
             
-        </P>
-    </article>
-
-    
+        </main>
+        
+        <!-- <aside>AD</aside> -->
+        </section>
+        <footer>
+            <a href="https://opentutorials.org/course/1">멘토 사이트</a>
+        </footer>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

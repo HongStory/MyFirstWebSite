@@ -2,85 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta content="yes" name="apple-mobile-web-app-capable" />  
-    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git</title>
     <link rel="stylesheet" href="light-mode.css" id="css-link">
 </head>
-<body id="target">
+<body>
+    <div class="container">
     <header>
+        <div id = "control">
+            <input type="button" value="DarkModOn" onclick="changeMode();"/>
+        </div>
         <img src="logo.webp"/>
-        <h1><a href="index.html">My First Web Site!</a></h1>
+        <h1><a href ="index.html">My First Web Site!</h1>
+            
     </header>
-
+    <section class="content">
     <nav>
         <ol>
-            <li><a href="page_html.html"> HTML is </a></li>
-            <li><a href="page_css.html"> CSS is </a></li>
-            <li><a href="page_javascript.html"> JavaScript is </a></li>
-            <li><a href="page_mysql.html"> Mysql is </a></li>
-            <li><a href="page_nodejs.html"> Nodejs is </a></li>
-            <li><a href="page_git.html"> Git is </a></li>
-            <li><a href="page_react.html"> React is </a></li>
+        <li><a href="page_html.html"> HTML is </a></li>
+        <li><a href="page_css.html"> CSS is </a></li>
+        <li><a href="page_javascript.html"> JavaScript is </a></li>
+        <li><a href="page_mysql.html"> Mysql is </a></li>
+        <li><a href="page_nodejs.html"> Nodejs is </a></li>
+        <li><a href="page_git.html"> Git is </a></li>
+        <li><a href="page_react.html"> React is </a></li>
         </ol>
     </nav>
-
-    <div id = "control">
-        <input type="button" value="DarkModOn" onclick="changeMode();"/>
-    </div>
-
-    <article>
-        <h2>Git is</h2>
+    
+         <main>
+            <h2>Git is</h2>
+            <ul>
+                <li>Git Bash</li>
+                <li>cd foldername/foldername/ (ディレクトリ移動)</li>
+                <li>pwd (現在位置)</li>
+                <li>ls -al (ディレクトリ中のファイルの種類)</li>
+                <li>mkdir name (ディレクトリ生成)</li>
+                <li>cd foldername (移動)</li>
+                <li>git init . </li>
+                <li>cd .git</li>
+                <li>cd ..</li>
+                <li>Working tree</li>
+                <li>Staging Area</li>
+                <li>Repository</li>
+                <li>nano filename.txt</li>
+                <li>input filetext -> Ctrl x</li>
+                <li>cat filename.txt</li>
+                <li>git status</li>
+                <li>No commits yet</li>
+                <li>Untracked files</li>
+                <li>git add filename.txt</li>
+                <li>git status</li>
+                <li>Changes to be committed</li>
+                <li>git config --global user.name "myname"</li>
+                <li>git config --global user.email example@gmail.com</li>
+                <li>git commit -m "Message 1"</li>
+                <li>git log</li>
+                <li>nano filename.txt</li>
+                <li>input filetext -> Ctrl x</li>
+                <li>git add filename.txt</li>
+                <li>git commit -m "Message 2"</li>
+                <li>git commit --stat</li>
+                <li>git diff</li>
+                <li>git reset -hard</li>
+                <li>git log -p</li>
+                <li>q</li>
+                <li>git checkout version name(commit id)</li>
+                <li>git checkout master</li>
+                <li>git add .</li>
+                <li>git add directory name</li>
+                <li>git commit -am "Message" (tracked file only)</li>
+                <li>touch filename.txt"</li>
+                <li>git config --global core.editor "nano"</li>
+                <li>git commit</li>
+                <li>git reset --hard version name(commit id)</li>
+                <li>git reset --help</li>
+                <li>git revert version name(commit id)</li>
+        </main>
         
-        <ul>
-        <li>Git Bash</li>
-        <li>cd foldername/foldername/ (ディレクトリ移動)</li>
-        <li>pwd (現在位置)</li>
-        <li>ls -al (ディレクトリ中のファイルの種類)</li>
-        <li>mkdir name (ディレクトリ生成)</li>
-        <li>cd foldername (移動)</li>
-        <li>git init . </li>
-        <li>cd .git</li>
-        <li>cd ..</li>
-        <li>Working tree</li>
-        <li>Staging Area</li>
-        <li>Repository</li>
-        <li>nano filename.txt</li>
-        <li>input filetext -> Ctrl x</li>
-        <li>cat filename.txt</li>
-        <li>git status</li>
-        <li>No commits yet</li>
-        <li>Untracked files</li>
-        <li>git add filename.txt</li>
-        <li>git status</li>
-        <li>Changes to be committed</li>
-        <li>git config --global user.name "myname"</li>
-        <li>git config --global user.email example@gmail.com</li>
-        <li>git commit -m "Message 1"</li>
-        <li>git log</li>
-        <li>nano filename.txt</li>
-        <li>input filetext -> Ctrl x</li>
-        <li>git add filename.txt</li>
-        <li>git commit -m "Message 2"</li>
-        <li>git commit --stat</li>
-        <li>git diff</li>
-        <li>git reset -hard</li>
-        <li>git log -p</li>
-        <li>q</li>
-        <li>git checkout version name(commit id)</li>
-        <li>git checkout master</li>
-        <li>git add .</li>
-        <li>git add directory name</li>
-        <li>git commit -am "Message" (tracked file only)</li>
-        <li>touch filename.txt"</li>
-        <li>git config --global core.editor "nano"</li>
-        <li>git commit</li>
-        <li>git reset --hard version name(commit id)</li>
-        <li>git reset --help</li>
-        <li>git revert version name(commit id)</li>
-        </ul>
-    </article>
+        <!-- <aside>AD</aside> -->
+        </section>
+        <footer>
+            <a href="https://opentutorials.org/course/1">멘토 사이트</a>
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

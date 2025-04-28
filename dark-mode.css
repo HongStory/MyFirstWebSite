@@ -1,8 +1,6 @@
 body {
     color: white;
     background-color: black;
-    width: 100%;
-    overflow-x: hidden;  
     margin: 0;  
     
 }
@@ -57,3 +55,31 @@ h1{
 p{
     width: 400px;
 }
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    border-top:3px solid gray;
+    padding:20px;
+    text-align: center;
+}
+.content{
+    display:flex;
+}
+.content nav{
+    border-right:3px solid gray;
+}
+.content aside{
+    border-left:1px solid gray;    
+}
+nav, aside{
+    flex-basis: 150px;
+    flex-shrink: 0;
+}
+main{
+    padding:10px;
+}
+

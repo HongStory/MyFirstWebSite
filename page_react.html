@@ -2,43 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta content="yes" name="apple-mobile-web-app-capable" />  
-    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React</title>
     <link rel="stylesheet" href="light-mode.css" id="css-link">
 </head>
-<body id="target">
+<body>
+    <div class="container">
     <header>
+        <div id = "control">
+            <input type="button" value="DarkModOn" onclick="changeMode();"/>
+        </div>
         <img src="logo.webp"/>
-        <h1><a href="index.html">React</a></h1>
+        <h1><a href ="index.html">My First Web Site!</h1>
+            
     </header>
-
+    <section class="content">
     <nav>
         <ol>
-            <li><a href="page_html.html"> HTML is </a></li>
-            <li><a href="page_css.html"> CSS is </a></li>
-            <li><a href="page_javascript.html"> JavaScript is </a></li>
-            <li><a href="page_mysql.html"> Mysql is </a></li>
-            <li><a href="page_nodejs.html"> Nodejs is </a></li>
-            <li><a href="page_git.html"> Git is </a></li>
-            <li><a href="page_react.html"> React is </a></li>
+        <li><a href="page_html.html"> HTML is </a></li>
+        <li><a href="page_css.html"> CSS is </a></li>
+        <li><a href="page_javascript.html"> JavaScript is </a></li>
+        <li><a href="page_mysql.html"> Mysql is </a></li>
+        <li><a href="page_nodejs.html"> Nodejs is </a></li>
+        <li><a href="page_git.html"> Git is </a></li>
+        <li><a href="page_react.html"> React is </a></li>
         </ol>
     </nav>
-
-    <div id = "control">
-        <input type="button" value="DarkModOn" onclick="changeMode();"/>
+    
+         <main>
+            <h2>React is</h2>
+            <ul>
+                <li>tag1</li>
+                <li>tag2</li>
+                <li>tag3</li>
+            </ul>
+            
+        </main>
+        
+        <!-- <aside>AD</aside> -->
+        </section>
+        <footer>
+            <a href="https://opentutorials.org/course/1">멘토 사이트</a>
+        </footer>
     </div>
-
-    <article>
-        <h2>React is</h2>
-        
-        <ul>
-        <li>JavaScript Website</li>
-        <li>syntax</li>
-        
-        </ul>
-    </article>
     <script src="script.js"></script>
 </body>
 </html>
