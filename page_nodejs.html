@@ -27,11 +27,13 @@
             <li><a href="page_nodejs.html"> Nodejs </a></li>
             <li><a href="page_git.html"> Git </a></li>
             <li><a href="page_react.html"> React </a></li>
+            <li><a href="page_pm.html"> Package-Manager </a></li>
         </ol>
     </nav>
     
          <main>
             <h2>Nodejs is</h2>
+            <h3><a href="https://github.com/SuaStory/nodejs/blob/main/main.js" target="_blank">[Source Code Link]</a></h3>
             <ul>
                 <li>node -v</li>
                 <li>node enter</li>
@@ -40,13 +42,154 @@
                 <li>helloworld.js</li>
                 <li>node helloworld.js</li>
                 <li>response.end(fs.readFileSync(_dirname + url));</li>
-                <h3>URL</h3>
+                
+            <h3>URL</h3>
                 <li>http://HelloWorld.org:3000/main?id=HTML&page=12</li>
                 <li>http => protocol</li>
                 <li>HelloWorld.org => host(domain)</li>
                 <li>3000 => port</li>
                 <li>main => path</li>
                 <li>id=HTML&page=12 => query string</li>
+            
+            <h3>Module</h3>
+                <li>var http = require('http');</li>
+                <li>var fs = require('fs');</li>
+                <li>var url = require('url');</li>
+                <li>var app = http.createServer
+                    (function(request,response){ });</li>
+                <li>response.writeHead(200);</li>
+                <li>response.end();</li>
+                <li>app.listen(3000);</li>
+                
+            <h3>Query Data</h3>    
+                <li>var queryData = url.parse(request.url,true).query;</li>
+                <li>console.log(queryData);</li>
+                <li>console.log(queryData.id);</li>
+                <li>var template = `&lt;!doctype html&gt;&lt;HTML&gt;&lt;/HTML&gt;`;</li>
+                <li>&lt;title&gt;${queryData.id}&lt;/title&gt;</li>
+                <li>response.writeHead(200);</li>
+                <li>response.end(template);</li>
+                <li>&lt;a href="1.html"&gt;HTML&lt;/a&gt;</li>
+                <li>&lt;a href="/?id=HTML"&gt;HTML&lt;/a&gt;</li>
+                <li>var title = queryData.id</li>
+                <li>&lt;a href="index.html"&gt;WEB&lt;/a&gt;</li>
+                <li>&lt;a href="/"&gt;WEB&lt;/a&gt;</li>
+                <li>var _url = queryData.id;</li>
+                <li>if(_url=="/"){title = welcome;}</li>
+                
+            <h3>ReadFile</h3>
+                <li>fs.readFile('dir/${queryData.id}',
+                    'utf8',function(err,description)
+                    {var template = `&lt;!doctype html&gt;
+                        &lt;HTML&gt;&lt;/HTML&gt;`;});</li>
+                <li>&lt;p&gt;${description}&lt;p&gt;</li>
+
+            <h3>INPUT DATA</h3>
+                <li>Parameter</li>
+                <li>Argument</li>
+                <li>var args = process.argv;</li>
+                <li>console.log(args);</li>
+                <li>node filename.js ABC</li>
+                <h3>RootPage</h3>
+                <li>console.log
+                    (url.parse(request.url,true).pathname);</li>
+                <li>if(pathname==='/'){
+                    fs.readFile('dir/${queryData.id}',
+                    'utf8',function(err,description)
+                    {var template = `&lt;!doctype html&gt;
+                        &lt;HTML&gt;&lt;/HTML&gt;`;
+                        response.writeHead(200);
+                        response.end(template);
+                    });}</li>
+                
+            <h3>ErrorPage</h3>    
+                <li>else{response.writeHead(404);
+                    response.end('Not found');}</li>
+                
+                    <h3>MainPage</h3>
+                <li>if(pathname===undefined){
+                    var title = 'Welcome';
+                    var description = 'HelloWorld';}</li>
+
+            <h3>Read Dir => Array type</h3>
+                <li>var testFolder = './data';</li>
+                <li>var fs = require('fs');</li>    
+                <li>fs.readdir(testFolder,function<br>
+                    (error,fileList){console.log(fileList)});</li>
+
+            <h3>List Loop</h3>
+                <li>var list = '&lt;ul&gt;'</li>
+                <li>while(i < fileList.length){<br>
+                        list = list + `&lt;li&gt;&lt;a<br> 
+                        href="/?id=${fileList[i]}"&gt;<br>
+                        ${fileList[i]}&lt;/a&gt;&lt;/li&gt;`;<br>
+                        i = i+1;
+                }</li>        
+                <li>list = list + '&lt;/ul&gt;'</li>
+
+                <h3>Synchronous & Asynchronous </h3>
+                <li>fs.readFileSync('sample.txt','utf8');</li>
+                <li>fs.readFile<br>
+                    ('sample.txt,'utf8',function(err,result){});</li>
+                
+                <h3>CREATE</h3>
+                <li>&lt;a href="/create"&gt;create&lt;/a&gt;</li>
+                <li>else if(pathname==='/create'){</li>
+                <li>&lt;form action=<br>"http://localhost:3000/create_process" method="post"&gt;</li>
+                <li>&lt;input type="text" name="title"&gt;</li>
+                <li>&lt;textarea name="description"&gt;&lt;/textarea&gt;</li>
+                <li>&lt;input type="summit"&gt;</li>
+                <li>&lt;/form&gt;}</li>
+                <li>else if(pathname==='/create_process'){}</li>
+                <li>var body = '';</li>
+                <li>request.on('data',function(data){});</li>
+                <li>body = body + data;</li>
+                <li>request.on('end',function(data){});</li>
+                <li>var qs = require('querystring');</li>
+                <li>var post = qs.parse(body);</li>
+                <li>console.log(post);</li>
+                <li>console.log(post.title);</li>
+                <li>console.log(post.description);</li>
+                <li>var title = post.title;</li>
+                <li>var description = post.description;</li>
+                <li>fs.writeFile(`data/${title}`,description,<br>'utf8',function(err))</li>
+                <h3>Redirection</h3>
+                <li>response.writeHead(302,{Location:`/?id=${title}`});</li>
+                <li>response.end();</li>
+
+                <h3>UPDATE</h3>
+                <li>&lt;a href="/update"&gt;update&lt;/a&gt;</li>
+                <li>${control}</li>
+                <li>&lt;a href="/update?id=${title}"&gt;update&lt;/a&gt;</li>
+                <li>else if(pathname==='/update'){}</li>
+                <li>fs.readdir(){}</li>
+                <li>fs.readFile(){}</li>
+                <li>form action="/update_process"</li>
+                <li>input value="${title}"</li>
+                <li>description${description}</li>
+                <li>&lt;input type="hidden"name="id" value="${title}"&gt;</li>
+                <li>else if(pathname==='/update=process'){}</li>
+                <li>var id = post.id;</li>
+                <li>fs.rename(`data/${id}`,`data/${title}`,<br>function(error){})</li>
+                
+                <h3>DELETE</h3>
+                <li>form action="/delete_process" method="post"</li>
+                <li>input type="hidden" name="id" value="${title}"</li>
+                <li>input type="submit" value="delete"</li>
+                <li>else if(pathname==='/delete_process'){}</li>
+                <li>fs.unLink(`data/${id}`,function(error){})</li>
+                <li>response.writeHead(302,{Location:`/`});</li>
+                <li>response.end();</li>
+
+
+
+
+                    
+
+                    
+
+
+
             </ul>
             
         </main>
@@ -55,6 +198,7 @@
         </section>
         <footer>
             <a href="https://opentutorials.org/course/1">멘토 사이트</a>
+            <input id = "rollUp" type="button" value="UpScroll" onclick="scroll();"/>
         </footer>
     </div>
     <script src="script.js"></script>

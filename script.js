@@ -81,3 +81,16 @@ var css = document.querySelector("#css-link");
             location.reload(); 
             // 웹페이지 새로고침
         }
+
+        let rollUpBtn = document.querySelector('#rollUp');
+
+const scroll = () => {
+    if (window.scrollY !== 0) {
+        setTimeout(() => {
+            window.scrollTo(0, window.scrollY - 50);
+            scroll();
+        }, 10);
+    }
+}
+
+rollUpBtn.addEventListener('click', scroll);

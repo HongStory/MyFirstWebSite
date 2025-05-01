@@ -67,6 +67,7 @@ footer{
     border-top:3px solid gray;
     padding:20px;
     text-align: center;
+    
 }
 .content{
     display:flex;
@@ -93,3 +94,6 @@ main{
     padding:0px;
 }
 
+#rollUp{
+    float: right;
+}

@@ -27,17 +27,18 @@
             <li><a href="page_nodejs.html"> Nodejs </a></li>
             <li><a href="page_git.html"> Git </a></li>
             <li><a href="page_react.html"> React </a></li>
+            <li><a href="page_pm.html"> Package-Manager </a></li>
         </ol>
     </nav>
     
          <main>
-            <h2>JavaScript is</h2>
+            <h2>JavaScript with Nodejs</h2>
             <ul>
                 <li>var </li>
                 <li>let</li>
                 <li>const</li>
                 <li>string</li>
-                <li>bool</li>
+                <li>boolean</li>
                 <li>Object</li>
                 <li>var num = 1;</li>
                 <li>var string = 'HelloWorld';</li>
@@ -45,8 +46,59 @@
                 <li>var letter = 'dear : '+string+''</li>
                 <li>\n</li>
                 <li>`Template literals`</li>
-                <li>var letter = 'dear : ${string}'</li>
-                <li></li>
+                <li>var letter = `dear : ${string}`</li>
+                <li>==,===,=>,=&lt;,>,&lt;,</li>
+                <li>if(true|false){console.log('TRUE');}</li>
+                <li>else{console.log('FALSE');}</li>
+
+            <h3>Loop</h3>
+                <li>var i = 0;</li>
+                <li>while(i < 5){console.log('A'); i = i + 1;}</li>
+            
+            <h3>Array</h3>
+                <li>var arr = ['A', 'B', 'C'];</li>
+                <li>console.log(arr[0]);</li>
+                <li>console.log(arr[1]);</li>
+                <li>console.log(arr[2]);</li>
+                <li>arr[2] = 3;</li>
+                <li>console.log(arr.length);</li>
+                <li>arr.push('D');</li>
+            
+            <h3>Loop + Array</h3>
+                <li>var arr = [1, 2, 3];</li>
+                <li>var i = 0;</li>
+                <li>while(i < arr.length)<br>
+                    {console.log(arr[i]); i = i + 1;}</li>
+                <li>var total = 0;</li>
+                <li>total = total + arr[i];</li>
+                <li>console.log(total);</li>
+                
+                <h3>function</h3>
+                <li>function fun(){}</li>
+                <li>fun();</li>
+                <li>Math.round();</li>
+                <li>Object.Function();</li>
+                <li>console.log(Math.round(1.6));</li>
+                <li>function sum(a,b){
+                    console.log(a+b);
+                    }</li>
+                <li>sum(2,3); => 5</li>
+                <li>a,b => parameter</li>
+                <li>2,3 => argument</li>
+                <li>function sum(a,b){
+                    return a+b;
+                    }</li>
+                <li>console.log(sum(2,3));=>5</li>    
+                <li>return => function over</li>
+                <li>함수로 중복된 코드를 묶어서 정리</li>
+                <li>関数で被っているコードを纏める</li>
+                <h3>Callback function</h3>
+                <li>function a(){}</li>
+                <li>var a = function (){}</li>
+                <li>a();</li>
+                <li>function b(callback){callback();}</li>
+                <li>b(a);</li>
+
             </ul>
             
         </main>
@@ -55,6 +107,7 @@
         </section>
         <footer>
             <a href="https://opentutorials.org/course/1">멘토 사이트</a>
+            <input id = "rollUp" type="button" value="UpScroll" onclick="scroll();"/>
         </footer>
     </div>
     <script src="script.js"></script>
