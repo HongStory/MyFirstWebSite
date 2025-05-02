@@ -99,6 +99,42 @@
                 <li>function b(callback){callback();}</li>
                 <li>b(a);</li>
 
+                <h3>Object</h3>
+                <li>var obj = {'programmer':'tom',<br>'designer':'kim','manager':'suzuki'}</li>
+                <li>console.log(obj.programmer);</li>
+                <li>console.log(obj['programmer']);</li>
+
+                <h3>Object & Loop</h3>
+                <li>for(var i in obj){console.log(i,obj[i]);}</li>
+
+                <h3>Object Oriented Programming</h3>
+                <li>var f = function(){}</li>
+                <li>console.log(f);</li>
+                <li>f();</li>
+                <li>var a = [f];</li>
+                <li>a[0]();</li>
+                <li>var obj = {func:f}</li>
+                <li>obj.func();</li>
+                 
+                <h3>this</h3>
+                <li>var obj={a:b,c:d}</li>
+                <li>function f1(){console.log(obj.a)}</li>
+                <li>function f2(){console.log(obj.c)}</li>
+                <li>f1();</li>
+                <li>f2();</li>
+                <li>var obj={a:b,c:d,<br>
+                f1:function(){console.log(obj.a)},<br>
+                f2:function(){console.log(this.c)}}</li>
+                <li>obj.f1();</li>
+                <li>obj.f2();</li>
+
+                <h3>Module</h3>
+                <li>var mod={a:'b',<br>f:function(){console.log(this.a)}}</li>
+                <li>module.exports = mod;</li>
+                <li>var mod = require('./filename.js')</li>
+                <li>mod.f();</li>
+                <li>console.log(mod);</li>
+                
             </ul>
             
         </main>
