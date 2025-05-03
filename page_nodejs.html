@@ -23,16 +23,17 @@
             <li><a href="page_html.html"> HTML </a></li>
             <li><a href="page_css.html"> CSS </a></li>
             <li><a href="page_javascript.html"> JavaScript </a></li>
-            <li><a href="page_mysql.html"> Mysql </a></li>
-            <li><a href="page_nodejs.html"> Nodejs </a></li>
-            <li><a href="page_git.html"> Git </a></li>
             <li><a href="page_react.html"> React </a></li>
+            <li><a href="page_nextjs.html"> Nextjs </a></li>
+            <li><a href="page_nodejs.html"> Nodejs </a></li>
+            <li><a href="page_mysql.html"> Mysql </a></li>
+            <li><a href="page_git.html"> Git </a></li>
             <li><a href="page_pm.html"> Package-Manager </a></li>
         </ol>
     </nav>
     
          <main>
-            <h2>Nodejs is</h2>
+            <h2>Nodejs</h2>
             <h3><a href="https://github.com/SuaStory/nodejs/blob/main/main.js" target="_blank">[Source Code Link]</a></h3>
             <ul>
                 <li>node -v</li>
@@ -107,18 +108,22 @@
                     response.end('Not found');}</li>
                 
                     <h3>MainPage</h3>
-                <li>if(pathname===undefined){
+                <li>if(pathname==='/'){
+                    if(queryData.id===undefined){
                     var title = 'Welcome';
-                    var description = 'HelloWorld';}</li>
+                    var description = 'HelloWorld';}}</li>
 
-            <h3>Read Dir => Array type</h3>
+            <h3>Read Dir File => Array type</h3>
                 <li>var testFolder = './data';</li>
                 <li>var fs = require('fs');</li>    
                 <li>fs.readdir(testFolder,function<br>
                     (error,fileList){console.log(fileList)});</li>
 
             <h3>List Loop</h3>
+                <li>fs.readdir('./data',function(err,fileList){})</li>
+                <li>console.log(fileList);</li>    
                 <li>var list = '&lt;ul&gt;'</li>
+                <li>var i = 0;</li>
                 <li>while(i < fileList.length){<br>
                         list = list + `&lt;li&gt;&lt;a<br> 
                         href="/?id=${fileList[i]}"&gt;<br>
@@ -126,6 +131,12 @@
                         i = i+1;
                 }</li>        
                 <li>list = list + '&lt;/ul&gt;'</li>
+                <li>${list}</li>
+
+                <h3><a href="https://github.com/SuaStory/nodejs/blob/main/1main.js" target="_blank">ここまでのSource Code</a></h3>
+
+                <h3>functionで整理</h3>
+                <li><a href="https://github.com/SuaStory/nodejs/blob/main/2main.js "target="_blank">Source Code</a></li>
 
                 <h3>Synchronous & Asynchronous </h3>
                 <li>fs.readFileSync('sample.txt','utf8');</li>
