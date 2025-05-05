@@ -144,7 +144,7 @@
                     ('sample.txt,'utf8',function(err,result){});</li>
                 
                 <h3>CREATE</h3>
-                <li><a href="https://github.com/SuaStory/nodejs/blob/main/3main.js "target="_blank">Source Code</a></li>
+                <h3><a href="https://github.com/SuaStory/nodejs/blob/main/3main.js "target="_blank">Source Code</a></h3>
                 <li>&lt;a href="/create"&gt;create&lt;/a&gt;</li>
                 <li>else if(pathname==='/create'){</li>
                 <li>&lt;form action=<br>"http://localhost:3000/create_process" method="post"&gt;</li>
@@ -170,6 +170,7 @@
                 <li>response.end();</li>
 
                 <h3>UPDATE</h3>
+                <h3><a href="https://github.com/SuaStory/nodejs/blob/main/4main.js"target="_blank">Source Code</a></h3>
                 <li>&lt;a href="/update"&gt;update&lt;/a&gt;</li>
                 <li>${control}</li>
                 <li>&lt;a href="/update?id=${title}"&gt;update&lt;/a&gt;</li>
@@ -189,7 +190,7 @@
                 <li>input type="hidden" name="id" value="${title}"</li>
                 <li>input type="submit" value="delete"</li>
                 <li>else if(pathname==='/delete_process'){}</li>
-                <li>fs.unLink(`data/${id}`,function(error){})</li>
+                <li>fs.unlink(`data/${id}`,function(error){})</li>
                 <li>response.writeHead(302,{Location:`/`});</li>
                 <li>response.end();</li>
 
