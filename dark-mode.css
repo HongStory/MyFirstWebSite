@@ -99,3 +99,10 @@ main{
     float: right;
 }
 
+a{
+    text-decoration: none;
+}
+
+nav li{
+    margin: 7px;
+}

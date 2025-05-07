@@ -29,6 +29,8 @@
             <li><a href="page_mysql.html"> Mysql </a></li>
             <li><a href="page_git.html"> Git </a></li>
             <li><a href="page_pm.html"> Package-Manager </a></li>
+            <li><a href="page_cs1.html"> 컴퓨터 구조 </a></li>
+            <li><a href="page_cs2.html"> 운영체제 </a></li>
         </ol>
     </nav>
     
@@ -42,7 +44,7 @@
                 <li>Ctrl + c</li>
                 <li>helloworld.js</li>
                 <li>node helloworld.js</li>
-                <li>response.end(fs.readFileSync(_dirname + url));</li>
+                <li>response.end<br>(fs.readFileSync(_dirname + url));</li>
                 
             <h3>URL</h3>
                 <li>http://HelloWorld.org:3000/main?id=HTML&page=12</li>
@@ -91,9 +93,9 @@
                 <li>var args = process.argv;</li>
                 <li>console.log(args);</li>
                 <li>node filename.js ABC</li>
-                <h3>RootPage</h3>
-                <li>console.log
-                    (url.parse(request.url,true).pathname);</li>
+            <h3>RootPage</h3>
+                <li>console.log<br>
+                    (url.parse(request.url,true)<br>.pathname);</li>
                 <li>if(pathname==='/'){
                     fs.readFile('dir/${queryData.id}',
                     'utf8',function(err,description)
@@ -107,10 +109,10 @@
                 <li>else{response.writeHead(404);
                     response.end('Not found');}</li>
                 
-                    <h3>MainPage</h3>
-                <li>if(pathname==='/'){
+            <h3>MainPage</h3>
+                <li>if(pathname==='/')<br>{
                     if(queryData.id===undefined){
-                    var title = 'Welcome';
+                    var title = 'Welcome';<br>
                     var description = 'HelloWorld';}}</li>
 
             <h3>Read Dir File => Array type</h3>
@@ -147,12 +149,12 @@
                 <h3><a href="https://github.com/SuaStory/nodejs/blob/main/3main.js "target="_blank">Source Code</a></h3>
                 <li>&lt;a href="/create"&gt;create&lt;/a&gt;</li>
                 <li>else if(pathname==='/create'){</li>
-                <li>&lt;form action=<br>"http://localhost:3000/create_process" method="post"&gt;</li>
+                <li>&lt;form action=<br>"http://localhost:3000<br>/create_process" method="post"&gt;</li>
                 <li>&lt;input type="text" name="title"&gt;</li>
                 <li>&lt;textarea name="description"&gt;&lt;/textarea&gt;</li>
                 <li>&lt;input type="submit"&gt;</li>
                 <li>&lt;/form&gt;}</li>
-                <li>else if(pathname==='/create_process'){}</li>
+                <li>else if<br>(pathname==='/create_process'){}</li>
                 <li>var body = '';</li>
                 <li>request.on('data',function(data){});</li>
                 <li>body = body + data;</li>
@@ -164,9 +166,10 @@
                 <li>console.log(post.description);</li>
                 <li>var title = post.title;</li>
                 <li>var description = post.description;</li>
-                <li>fs.writeFile(`data/${title}`,description,<br>'utf8',function(err))</li>
+                <li>fs.writeFile(`data/${title}`,<br>description,'utf8',function(err))</li>
+                
                 <h3>Redirection</h3>
-                <li>response.writeHead(302,{Location:`/?id=${title}`});</li>
+                <li>response.writeHead<br>(302,{Location:`/?id=${title}`});</li>
                 <li>response.end();</li>
 
                 <h3>UPDATE</h3>
@@ -183,14 +186,14 @@
                 <li>&lt;input type="hidden"name="id" value="${title}"&gt;</li>
                 <li>else if(pathname==='/update=process'){}</li>
                 <li>var id = post.id;</li>
-                <li>fs.rename(`data/${id}`,`data/${title}`,<br>function(error){})</li>
+                <li>fs.rename(`data/${id}`,<br>`data/${title}`,function(error){})</li>
                 
                 <h3>DELETE</h3>
                 <h3><a href="https://github.com/SuaStory/nodejs/blob/main/5main.js"target="_blank">Source Code</a></h3>
                 <li>form action="/delete_process" method="post"</li>
                 <li>input type="hidden" name="id" value="${title}"</li>
                 <li>input type="submit" value="delete"</li>
-                <li>else if(pathname==='/delete_process'){}</li>
+                <li>else if<br>(pathname==='/delete_process'){}</li>
                 <li>fs.unlink(`data/${id}`,function(error){})</li>
                 <li>response.writeHead(302,{Location:`/`});</li>
                 <li>response.end();</li>
