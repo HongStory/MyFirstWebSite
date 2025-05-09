@@ -89,6 +89,7 @@ footer{
 nav, aside{
     flex-basis: 100px;
     flex-shrink: 0;
+    
 }
 main{
     padding:0px;
