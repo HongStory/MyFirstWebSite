@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS part2</title>
+    <link rel="stylesheet" href="light-mode.css" id="css-link">
+</head>
+<body>
+    <div class="container">
+    <header>
+        <div id = "control">
+            <input type="button" value="DarkModOn" onclick="changeMode();"/>
+        </div>
+        <img src="logo.webp"/>
+        <h1><a href ="index.html">My First Web Site!</h1>
+            
+    </header>
+    
+    <section class="content">
+    <nav>
+        <ol>
+            <li><a href="page_html.html"> HTML </a></li>
+            <li><a href="page_css.html"> CSS </a></li>
+            <li><a href="page_javascript.html"> JavaScript </a></li>
+            <li><a href="page_react.html"> React </a></li>
+            <li><a href="page_nextjs.html"> Nextjs </a></li>
+            <li><a href="page_nodejs.html"> Nodejs </a></li>
+            <li><a href="page_mysql.html"> Mysql </a></li>
+            <li><a href="page_git.html"> Git </a></li>
+            <li><a href="page_pm.html"> Package-Manager </a></li>
+            <li><a href="page_cs1.html"> 컴퓨터구조 </a></li>
+            <li><a href="page_cs2.html"> 구조파트2 </a></li>
+            <li><a href="page_os.html"> OS </a></li>
+            <li><a href="page_os2.html"> OS Part2 </a></li>
+            <li><a href="page_network.html"> Network </a></li>
+        </ol>
+    </nav>
+    
+        <main>
+            <h2>OS part2</h2>
+            <ul>
+            <h4>CPU 스케줄링 개요</h4>
+                <li>운영체제가 프로세스들에게 공정하고<br>
+                    합리적으로 CPU자원을 배분하는것</li>
+                <li>프로세스 우선순위</li>
+                <li>우선순위는 PCB에 저장</li>
+                <li>스케줄링 큐</li>
+                <li>CPU쪽에 줄서기</li>
+                <li>하드디스크쪽에 줄서기</li>
+                <li>프린터쪽에 줄서기</li>
+                <li>준비큐 언제든지 실행될 준비됨</li>
+                <li>대기큐 입출력요청와서 잠시 대기중</li>
+                
+            <h4>선점형과 비선점형 스케줄링</h4>    
+                <li>선점형:새치기 가능</li>
+                <li>자원 독점을 막는다</li>
+                <li>문맥교환자주발생 오버헤드초래</li>
+                <li>비선점형:끝날때까지 기다림</li>
+                
+            <h4>CPU스케줄링 알고리즘</h4>    
+                <li>선입 선처리(FCFS)</li>
+                <li>준비 큐에 삽입된 순서대로 처리</li>
+                <li>다음 프로세스의 대기 시간이 길어진다</li>
+                <li>최단 작업 우선</li>
+                <li></li>
+                <li>라운드 로빈</li>
+                <li>최소 잔여 시간 우선</li>
+                <li>우선 순위</li>
+                <li>다단계 큐</li>
+                <li>다단계 피브백 큐</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            
+        </main>
+        
+        <!-- <aside>AD</aside> -->
+        </section>
+        <footer>
+            <a href="https://opentutorials.org/course/1">멘토 사이트</a>
+            <input id = "rollUp" type="button" value="UpScroll" onclick="scroll();"/>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
