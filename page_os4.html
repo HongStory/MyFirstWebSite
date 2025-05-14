@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS part4</title>
+    <link rel="stylesheet" href="light-mode.css" id="css-link">
+</head>
+<body>
+    <div class="container">
+    <header>
+        <div id = "control">
+            <input type="button" value="DarkModOn" onclick="changeMode();"/>
+        </div>
+        <img src="logo.webp"/>
+        <h1><a href ="index.html">My First Web Site!</h1>
+            
+    </header>
+    
+    <section class="content">
+    <nav>
+        <ol>
+            <li><a href="page_html.html"> HTML </a></li>
+            <li><a href="page_css.html"> CSS </a></li>
+            <li><a href="page_javascript.html"> JavaScript </a></li>
+            <li><a href="page_react.html"> React </a></li>
+            <li><a href="page_nextjs.html"> Nextjs </a></li>
+            <li><a href="page_nodejs.html"> Nodejs </a></li>
+            <li><a href="page_mysql.html"> Mysql </a></li>
+            <li><a href="page_git.html"> Git </a></li>
+            <li><a href="page_pm.html"> Package-Manager </a></li>
+            <li><a href="page_cs1.html"> 컴퓨터구조 </a></li>
+            <li><a href="page_cs2.html"> 구조파트2 </a></li>
+            <li><a href="page_os.html"> OS Part1</a></li>
+            <li><a href="page_os2.html"> OS Part2 </a></li>
+            <li><a href="page_os3.html"> OS Part3 </a></li>
+            <li><a href="page_os4.html"> OS Part4 </a></li>
+            <li><a href="page_network.html"> Network </a></li>
+            <li><a href="page_network2.html"> NW part2 </a></li>
+            <li><a href="page_network3.html"> NW part3 </a></li>
+
+        </ol>
+    </nav>
+    
+        <main>
+            <h2>OS part4</h2>
+            <ul>
+            <h4>스래싱과 프레임 할당</h4>
+                <li>페이지 폴트가 자주 발생하는 이유</li>
+                <li>나쁜 페이지 교체 알고리즘을 사용해서</li>
+                <li>프로세스가 사용할 수 있는<br>
+                    프레임 자체가 적어서</li>
+                
+            <h4>스래싱</h4>    
+                <li>프로세스가 실행되는 시간보다<br> 
+                    페이징에 더 많은 신간을 소요하여<br>
+                    성능(CPU이용률)이 저하되는 문제</li>
+                <li>동시 실행되는 프로세스의 수를<br> 
+                    늘린다고 CPU이용률이<br>
+                    높아지는건 아니다</li>
+                <li>각 프로세스가 필요로 하는 최소한의<br>
+                    프레임 수가 보장되지 않았기 때문</li>
+                <li>각 프로세스가 필요로 하는 최소한의<br>
+                    프로세스를 파악하고 프로세스들에게<br>
+                    적절한 프레임을 할당해주어야 한다</li>
+            <h4>균등 할당</h4>    
+                <li>가장 단순한 할당방식</li>
+                <li>모든 프로세스들에게 균등하게<br>
+                    프레임을 할당하는 방식</li>
+            <h4>비례 할당</h4>    
+                <li>프로세스의 크기를 고려하자</li>
+                <li>프로세스 크기에 비례하여 프레임 할당</li>
+                <li>정적 할당 방식</li>
+                <li>실행해 보지 않으면 필요로하는<br>
+                    프레임 수는 알 수가 없다</li>
+                
+            <h4>작업 집합 모델</h4>    
+                <li>프로세스가 실행하는 과정에서<br>
+                    배분할 프레임 결정</li>
+                <li>스래싱이 발생하는 이유는<br>
+                    빈번한 페이지 교체 때문</li>
+                <li>그렇다면 CPU가 특정 시간 동안 주로<br>
+                    참조한 페이지 개수만큼만<br>
+                    프레임을 할당하면 된다</li>
+                <li>프로세스가 일정 기간 동안<br>
+                    참조한 페이지 집합을 기억하여<br>
+                    빈번한 페이지 교체를 방지</li>
+                <li>작업 집합이란 실행중인 프로세스가<br>
+                    일정 시간 동안 참조한 페이지의 집합</li>
+                <li>작업 집합 구하기</li>
+                <li>프로세스가 참조한 페이지</li>
+                <li>시간 간격 필요</li>
+            <h4>페이지 폴트 빈도</h4>    
+                <li>프로세스가 실행하는 과정에서<br>
+                    배분할 프레임 결정</li>
+                <li>두 개의 가정에서 생겨난 아이디어</li>
+                <li>페이지 폴트율이 높으면 그 프로<br>
+                    세스는 너무 적은 프레임을 갖고 있다</li>
+                <li>페이지 폴트율이 낮으면 그 프로<br>
+                    세스가 너무 많은 프레임을 갖고 있다</li>
+                <li>페이지 폴트율이 상한선과 하한선을<br>
+                    정하고 그 내부 범위 안에서만<br>
+                    프레임을 할당하는 방식</li>
+                <li>작업 집합 모델,페이지 폴트 빈도:<br>
+                    동적 할당 방식</li>
+                
+            <h4>페이징의 이점 + 계층적 페이징</h4>    
+                <li>쓰기식 복사</li>
+                <li>이론적인 fork()</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            
+        </main>
+        
+        <!-- <aside>AD</aside> -->
+        </section>
+        <footer>
+            <a href="https://opentutorials.org/course/1">멘토 사이트</a>
+            <input id = "rollUp" type="button" value="UpScroll" onclick="scroll();"/>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
