@@ -54,9 +54,175 @@
         <main>
             <h2>Network part9</h2>
             <ul>
-                <li>tag1</li>
-                <li>tag2</li>
-                <li>tag3</li>
+            <h4>HTTP헤더와 HTTP 기반기술</h4>
+            <h4>HTTP헤더</h4>    
+                <li>필드 이름(헤더이름)과<br> 
+                    필드값(헤더값)이 콜론(:)을<br> 
+                    기준으로 구분</li>
+                <li>헤더 유형<br>
+                    특별한 사전 지식이 필요하지 않은 헤더<br>
+                    사전 지식이 필요한 헤더<br>
+                    예:캐시,쿠키,콘텐츠 협상 관련 헤더</li>
+            <h4>Host</h4>    
+                <li>요청을 보낼 호스트를 나타내는 헤더</li>
+                <li>주로 도메인 네임 명시<br>
+                    포트 번호가 포함되어 있을 수있 음</li>
+                <li>예:http://info.cern.ch/hypertext<br>
+                    /WWW/TheProject.html에<br> 
+                    접속할때의 HTTP요청 메시지 일부</li>
+                <li>GET /hypertext/WWW<br>
+                    /TheProject.html HTTP/1.1<br>
+                    Host: info.cern.ch</li>
+            <h4>User-Agent</h4>    
+                <li>유저 에이전트:HTTP요청을 시작하는<br> 
+                    클라이언트 측의 프로그램<br>
+                    (예:웹브라우저)</li>
+                <li>User-Agent헤더:요청 메시지<br> 
+                    생성에관여한 클라이언트 프로그램과<br> 
+                    관련된 다양한 정보가 명시</li>
+            <h4>Referer</h4>    
+                <li>클라이언트가 요청을 보낼 때<br> 
+                    머무르고 있던 URL이 명시</li>
+                <li>클라이언트의 유입 경로를 파악</li>
+                <li>Referer: https://en.wikipedia.org/</li>
+            <h4>Authorization</h4>    
+                <li>클라이언트의 인증 정보를 담는 헤더</li>
+                <li>인증 타입과 인증을 위한 정보 명시</li>
+                <li>Authorization:<br>
+                    &lt;type&gt; &lt;credentials&gt;</li>
+                <li>인증 타입에 따라 인증<br> 
+                    정보에 명시될 값이 달라짐</li>
+                <li>가장 기본적인 HTTP인증 타입은Basic</li>
+                <li>username:password를<br>
+                    base64인코딩한 값을 인증<br> 
+                    정보로 삼는 방식</li>
+                <li>예:사용자아이디가apple<br>
+                    비밀번호는1234일 경우<br>
+                    apple:1234을<br>
+                    Base64로 인코딩한<br>
+                    blWluY2h1bDoxMjM0이런코드로인증</li>
+                <li>Authorization:<br> 
+                    Basic blWluY2h1bDoxMjM0</li>
+            <h4>Server</h4>    
+                <li>요청을 처리하는 서버 측의<br> 
+                    소프트웨어와 관련된 정보를 명시</li>
+                <li>예:Unix운영체제에서 동작하는<br> 
+                    아파치HTTP서버를 의미하는 헤더</li>
+                <li>Server: Apache/2/4/1 (Unix)</li>
+            <h4>Allow</h4>    
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
             <h4><a href="page_network10.html"> NW part10 </a></h4>
             </ul>
             
