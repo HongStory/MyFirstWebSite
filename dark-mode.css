@@ -107,4 +107,10 @@ a{
 nav li{
     margin: 7px;
     font-weight: bold;
+    
+}
+
+nav ol{
+    padding-right: 0;
+    padding-left: 10px;
 }
