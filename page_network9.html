@@ -118,50 +118,103 @@
                     Allow헤더가 함께 사용</li>
             <h4>Retry-After</h4>    
                 <li>상태코드503과 함께 사용될 수 있는 헤더</li>
-                <li>자원을 사용할 수 있는 날짜 <br>
+                <li>자원을 사용할 수 있는 날짜<br>
                     혹은 시각을 나타냄</li>
                 <li>Retry-After: Fri,<br> 
                     23 Aug 2024 09:00:00 GMT<br>
                     Retry-After: 120</li>
-                <li>예:2024년8월23일 금요일 <br>
+                <li>예:2024년8월23일 금요일<br>
                     09시 이후에 사용 가능함</li>
                 <li>예:120초 이후에 사용 가능함</li>
                 <li>현재는 요청을 처리할 수 없으나<br>
                     추후 가능할 수도 있음</li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+            <h4>Location</h4>    
+                <li>클라이언트에게 자원의 위치를<br> 
+                    알려 주기 위해 사용되는 헤더</li>
+                <li>주로 리다이렉션이 발생했을 때나<br> 
+                    새로운 자원이 생성되었을 때 사용</li>
+            <h4>WWW.Authenticate</h4>    
+                <li>상태 코드401(Unauthorized)과<br> 
+                    함께사용되는 헤더</li>
+                <li>자원에 접근하기 위한 인증 방식을 설명</li>
+                <li>www-Authenticate: Basic</li>
+            <h4>Authorization과WWw.Authenticate<br> 
+                헤더를 통한 HTTP 인증(Basic인증)과정</h4>    
+                <li>1.인증되지 않은 클라이언트가<br> 
+                    서버에 GET요청 메시지를 전송</li>
+                <li>2.서버는401과 함께<br> 
+                    WWW.Authenticate헤더를 통해<br> 
+                    인증 방식을 알림</li>
+                <li>3.클라이언트는 사용자로부터<br> 
+                    인증 정보(사용자 아이다와 비밀번호)<br>
+                    를 전달받음</li>
+                <li>4.클라이언트는 Base64인코딩한 값을<br> 
+                    Authorization헤더를 통해<br> 
+                    요청 메시지를 전송</li>
+                <li>서버는 인증 정보를 확인</li>
+                <li>인증이 유효하면 상태코드 200으로<br> 
+                    응답하고 인증되지 않았으면<br> 
+                    상태코드 401로 응답</li>
+            <h4>요청과 응답 모두에서<br>
+                활용되는 HTTP헤더</h4>    
+            <h4>Date</h4>    
+                <li>메시지가 생성된 날짜와 시각에<br> 
+                    관련된 정보를 닯은 헤더</li>
+                <li>Date: tue, 15 Nov 1994 08:12:31 GMT</li>
+            <h4>Connection</h4>    
+                <li>클라이언트의 요청과 응답 간의<br> 
+                    연결 방식을 설정하는 헤더</li>
+                <li>지속 연결이 Connection에<br>
+                    명시되는 대표적인 연결 방식</li>
+                <li>가장 대표적으로 사용되는 값은<br>
+                    Keep-alive와 close</li>
+                <li>Connection: Keep-alive</li>
+                <li>Connection: close</li>
+            <h4>Content-length</h4>    
+                <li>본문의 바이트 단위 크기(길이)</li>
+                <li>Content-length: 100</li>
+            <h4>표현 헤더(representation header):<br>
+                메시지 본문의 표현 방식을 설명하는 헤더</h4>
+            <h4>Content-Type</h4>    
+                <li>메시지 본문에서 사용된 미디어 타입</li>
+            <h4>Content-Language</h4>    
+                <li>메시지 본문에 사용된 자연어를 명시</li>
+                <li>언어 태크로 명시:<br>
+                    하이픈(-)으로 구분된 구조</li>
+                <li>일반적으로 첫번째 서브태크=언어코드<br>
+                    두번째 서브태크=국가코드</li>
+                <li>언어 코드<br>
+                    한국어:ko<br>
+                    영어:en<br>
+                    중국어:zh<br>
+                    일본어:ja<br>
+                    독일어:de<br>
+                    프랑스어:fr</li>
+                <li>국가 코드<br>
+                    한국:KR<br>
+                    미국:US<br>
+                    영국:GB<br>
+                    중국:CN<br>
+                    타이완:TW<br>
+                    일본:JP<br>
+                    독일:DE<br>
+                    프랑스:FR</li>
+                <li>언어코드-국가코드의 조합</li>
+                <li>어떤 국가에서 사용하는 어떤 언어</li>
+                <li>ko-KR</li>
+                <li>en-GB</li>
+                <li>en-US</li>
+            <h4>Content-Encoding</h4>    
+                <li>메시지 본문을 압축하거나 변환한 방식</li>
+                <li>Content-Encoding: gzip </li>
+                <li>Content-Encoding: compress</li>
+                <li>Content-Encoding: deflate</li>
+                <li>Content-Encoding: br</li>
+                <li>여러 인코딩이 사용되었을 경우<br>
+                    적용된 순서대로 명시</li>
+                <li>Content-Encoding: deflate,gzip </li>
+            <h4>HTTP 기반 기술</h4>    
+            <h4>캐시</h4>
                 <li></li>
                 <li></li>
                 <li></li>
