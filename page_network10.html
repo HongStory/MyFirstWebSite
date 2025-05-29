@@ -56,9 +56,189 @@
         <main>
             <h2>Application-layer4</h2>
             <ul>
-                <li>tag1</li>
-                <li>tag2</li>
-                <li>tag3</li>
+            <h4>쿠키(cookie)</h4>    
+                <li>HTTP는 상태를 유지하지 않는<br> 
+                    스테이트리스한 프로토콜</li>
+                <li>서버에서 생성되어 클라이언트<br> 
+                    측에 저장되는 데이터</li>
+                <li>상태를 유지하지 않는 HTTP의<br> 
+                    특성을 보완하기 위한 수단</li>
+                <li>기본적으로 "이름,값" 쌍의 형태<br>
+                    추가로 다양한 속성을 가질 수 있음</li>
+                <li>서버는 쿠키를 생성하여<br> 
+                    클라이언트에게 전송</li>
+                <li>클라이언트는 전달받은 쿠키를<br> 
+                    저장해 두엇다가 추후 요청 메시지에<br> 
+                    쿠키를 포함하여 전송</li>
+                <li>요청이 같은 클라이언트에서 왔는지<br>   
+                    로그인 상태를 유지하고 있는지<br>
+                    등을 알 수 있음</li>
+            <h4>쿠키(cookie)를 활용하는<br>
+                인증 기술, 세션 인증</h4>
+                <li>HTTP는 스테이트리스 프로토콜</li>
+                <li>같은 클라이언트가 서버에 여러 번<br>
+                    요청을 보낸다고 해도 기본적으로 서버는<br> 
+                    모든 요청들을 별개의 요청으로 간주</li>
+                <li>클라이언트가 서버에 요청 메시지를<br> 
+                    보낼 때마다(아아디,비빌번와같은)<br>
+                    인증 정보를 보내고 번거로운<br> 
+                    인증 과정을 거쳐야 하는 것일까?</li>
+            <h4>세션 아이디와 세션 인증<br>
+                (session id,session authentication)</h4>    
+                <li>1.클라이언트는 서버에게<br>
+                    (아이디,비밀번호와같은)<br>
+                    인증 정보를 전송</li>
+                <li>2.인증정보가 올바르다면 서버는 세션<br> 
+                    아이디를 생성해 클라이언트에게 전송</li>
+                <li>3.서버는 생성한 세션아이디를<br> 
+                    데이터베이스 등에 저장</li>
+                <li>4.클라이언트는 추후 요청을<br>
+                    보낼 때 쿠키 내에 세션<br> 
+                    아이디를 포함하여 전송</li>
+                <li>5.서버는 쿠키 속 세션 아이디와<br> 
+                    저장된 세션 아이디를 비교하여<br> 
+                    클라이언트를 식별</li>
+                <li>요청을 보낼 때마다 번거로운<br> 
+                    인증 과정을 거칠 필요가 없음</li>
+            <h4>서버의 쿠키 생성-<br>
+                클라이언트의 쿠키 활용</h4>
+                <li>응답 메시지의 Set-Cookie헤더<br>
+                    요청 메시지의 Cookie헤더 활용</li>
+            <h4>응답 메시지의 Set-Cookie헤더</h4>    
+                <li>쿠키의 이름,값과 더불어 세미콜론(;)<br>
+                    으로 구분되는 속성(들)을 전달</li>
+                <li>한 응답 메시지에 전달할 쿠키가<br>
+                    여러 개라면 다음과 같이<br> 
+                    여러 개의 Set-Cookie</li>
+                <li>응답 메시지<br>
+                    Set-Cookie: 이름=값<br>
+                    Set-Cookie: 이름=값; 속성1<br>
+                    Set-Cookie: 이름=값; 속성1; 속성2<br>
+                </li>
+            <h4>요청 메시지의 Cookie헤더</h4>    
+                <li>서버에 전달할 쿠키의 이름과<br> 
+                    값을 나타내는 헤더</li>
+                <li>여러 개의 쿠키 값을 서버에<br> 전달해야
+                    할때는 세미 콜론(;)사용</li>
+                <li>요청메시지<br>
+                    Cookie: 이름=값; 이름=값;</li>
+            <h4>예:name="name1",<br>
+                    phone="100-100",<br>
+                    message="Hello"<br>
+                    라는 쿠키를 클라이언트에게 전송</h4>
+                <li>응답 메시지<br>
+                    HTTP/1.1 200 OK<br>
+                    Content-Type: text/html<br>
+                    Set-Cookie: name=name1<br>
+                    Set-Cookie: phone=100-100<br>
+                    Set-Cookie: message=Hello</li>
+                <li>요청 메시지<br>
+                    GET /next_page HTTP/1.1<br>
+                    Host:example.com<br>
+                    Cookie: name=name1;<br> 
+                    phone=100-100;<br> 
+                    message=Hello</li>
+                <li>브라우저에서 쿠키를 직접 확인</li>
+                <li>쿠키는 브라우저에서 저장되고 관리</li>
+                <li>크롬 브라우저에서 개발자 도구를 열고</li>
+                <li>Application->Storage->Cookies</li>
+            <h4>쿠키의 여러 속성</h4>    
+                <li>쿠키는 사용 가능한 도메인이 정해져있음</li>
+                <li>www.naver.com에게 받은 쿠키를<br>
+                    전혀다른 웹 사이트인www.google.com<br>
+                    전송하면 암됨</li>
+                <li>응답 메시지속 Set-Cookie헤더의<br>
+                    domain으로 속성으로 정함</li>
+                <li>이 쿠키는 이 domain에서만 쓰라는뜻</li>
+                <li>같은 도메인이라도 경로별로 쿠키를<br> 
+                    구분하여 사용하고 싶을경우</li>
+                <li>Set-Cookie: name=name1<br> 
+                    path=/lectures</li>
+                <li>쿠키의 유효 기간</li>
+                <li>Set-Cookie: sessionID=abc123;<br>
+                    Expires=Fri,<br> 
+                    23 Aug 2024 09:00:00 GMT</li>
+                <li>Set-Cookie: sessionID=abc123;<br>
+                    Max-Age=2592000</li>
+            <h4>쿠키의 한계</h4>    
+                <li>쿠키의 대표적인 한계는 보안</li>
+                <li>쿠키 정보는 쉽게 노출되거나<br> 
+                    조작될 수 있음</li>
+            <h4>Secure 와 HttpOnly</h4>
+                <li>Secure: HTTP프로토콜이<br> 
+                    사용되는 경우에만 쿠키 전송</li>
+                <li>HttpOnly: HTTP송수신을 통해서만<br> 
+                    쿠키를 이용하도록 제한하는 속성</li>
+                <li>쿠키 관련 데이터는 자바스크립트<br> 
+                    언어를 통해서도 접근 가능</li>
+                <li>HttpOnly는 자바스크립트에서<br> 
+                    쿠키에 접근하지 못하도록 하는 속성</li>
+            <h4>쿠키와 유사한 웹 스토리지(storage)</h4>
+                <li>클라이언트가 저장하고 클라이언트의<br> 
+                    상태를 추측할 수 있는 키,값<br> 
+                    쌍형태의 정보</li>
+                <li>웹스토리지는 웹브라우저 내에<br> 
+                    저장 일반적으로 쿠키보다<br> 더
+                    큰 데이터 저장가능</li>
+                <li>쿠키는 서버로 자동 전송되지만<br>
+                    웹 스토리지의 정보는 서버로<br> 
+                    자동 전송 않함</li>
+                <li>로컬 스토리지:별도로 삭제하지 않는<br> 
+                    한 영구적으로 저장이 가능한 정보</li>
+                <li>세션 스토리지:세션이 유지되는 동안<br>
+                    (브라우저가 열러 있는 동안)<br>
+                    유지되는 정보</li>
+                <li>개발자 도구->Application->Storage</li>
+            <h4>콘텐츠 협상과 표현</h4>    
+                <li>클라이언트는 서버에 자원을 요청하고<br>
+                    서버는 요청받은 자원을 응답한다</li>
+                <li>자원은URI(URL)로 특정 가능하다</li>
+                <li>한국에서 접속하거나 한국어<br>
+                    계정으로 특정 URL에 접속하면<br> 
+                    한국어로된 웹페이지</li>
+                <li>다른 지역에서 접속하거나<br> 
+                    영어 계정으로 같은 URL에<br> 
+                    접속하면 영어로 된 웹 페이지</li>
+            <h4>콘텐츠 협상</h4>    
+                <li>같은 URI에 대해 가장 적합한<br> 
+                    자원의 형태를 제공하는 메커니즘</li>
+                <li>같은URI로 식별가능한 HTML문서라해도<br>
+                    영어로 요청하면 영어로된 형태로 제공<br>
+                    한국어로 요청하면<br> 
+                    한국어로 된 형태를 제공</li>
+            <h4>자원의 표현(representation)</h4>    
+                <li>송수신 가능한 자원의 형태</li>
+                <li>즉 콘텐츠 협상은 클라이언트에게<br> 
+                    가장 적합한 자원의 표현을<br>
+                    제공하는 메커니즘</li>
+            <h4>GET메서드의 정의</h4>    
+                <li>자원의 특정표현을 습득하기 위한 메서드</li>
+            <h4>컨텐츠 협상 관련 HTTP헤더</h4>    
+                <li>Accept헤더:선호하는 미디어 타입</li>
+                <li>Accept-Language:선호하는 언어</li>
+                <li>Accept-Charset및Accept-Encoding:<br>
+                    선호하는 문자 인코딩과 압축 방식</li>
+                <li>한국어 및 HTML 선호</li>
+                <li>GET /index.html HTTP/1.1<br>
+                    Host: example.com<br>
+                    Accept-Language: ko<br>
+                    Accept: text/html</li>
+            <h4>선호도에 우선 순위 반영</h4>    
+                <li>언어는 한국어를 가장 선호하지만<br> 
+                    영어도 받을 용의가 있다</li>
+                <li>미디어 타입은 HTML문서를 가장 선호하고<br>
+                    XML을 다음으로 선호하고<br>
+                    일반 텐스트를 다음으로 선호한다</li>
+                <li>Accept-Language: ko-KR,ko;q=0.9<br>
+                    en-US;q=0.8,en;q=0.7</li>
+                <li>Accept:<br>
+                    text/html,application/xml;q=0.9,<br>
+                    text/plain;q=0.6;*/*;q=0.5</li>
+                <li>우선순위는 콘텐츠 협상관련<br>
+                    헤더의 q값으로 표현</li>
+                <li>값이 클수록 우선순위가 높음</li>
+                <li>생략되었을 경우에는 1을 의미</li>
+                <li>범위는0~1까지</li>
             <h4><a href="page_network11.html"> Application-layer5 </a></h4>
             </ul>
             
