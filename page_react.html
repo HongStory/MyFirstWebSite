@@ -90,12 +90,32 @@
                     {"predeploy": "npm run build",<br>
                     "deploy": "gh-pages -d build"<br>
                     }</li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+            <h4>component</h4>    
+                <li>function Header(){<br>
+                    return &lt;header&gt;WEB&lt;/header&gt;<br>
+                    }</li>
+                <li>&lt;Header&gt;&lt;/Header&gt;</li>
+            <h4>props</h4>    
+                <li>&lt;Header title="REACT"&gt;&lt;/Header&gt;</li>
+                <li>function Header(props) {<br>
+                    console.log('props',props,props.title);<br>
+                    return &lt;header><br>
+                    &lt;h1>&lt;a href="/">{props.title}&lt;/a>&lt;/h1><br>
+                    &lt;/header><br>
+                    }</li>
+            <h4>event</h4>    
+                <li>&lt;Header title="REACT"<br> 
+                    onChangeMode={()=>{<br>
+                    alert('Header');<br>
+                    }}>&lt;/Header></li>
+                <li>function Header(props) {<br>
+                    return &lt;header><br>
+                        &lt;h1>&lt;a href="/" onClick={(event)=>{<br>
+                        event.preventDefault();<br>
+                        props.onChangeMode();<br>
+                        }}>{props.title}&lt;/a>&lt;/h1><br>
+                        &lt;/header><br>
+                    }</li>
                 <li></li>
                 <li></li>
                 <li></li>
