@@ -12,7 +12,7 @@
         <div id = "control">
             <input type="button" value="DarkModOn" onclick="changeMode();"/>
         </div>
-        <img src="logo.webp"/>
+        <img src="logo.webp" alt=""/>
         <h1><a href ="index.html">My First Web Site!</h1>
             
     </header>
@@ -183,83 +183,333 @@
                     console.log(i);}<br>
                 <li>for文の中にfor文も可能</li>
             <h4>関数(function)</h4>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>コードの再利用性アップ</li>
+                <li>function name(a,b){<br>
+                    return c<br>
+                    }</li>
+                <li>name();</li>
+                <li>function loop(){<br>
+                        for()<br>
+                    }</li>
+                <li>returnの後は関数終了される</li>
+                <li>function name(arg){<br>
+                        return arg;<br>
+                    }</li>
+                <li>name(name1);</li>
+                <li>name = function(){}</li>
+                <li>name();</li>
+                <li>(function(){})();</li>
+            <h4>配列(array)</h4>    
+                <li>let member = ['a', 'b', 'c']</li>
+                <li>member[0];</li>
+                <li>member[1];</li>
+                <li>member[2];</li>
+                <li>function member(){<br>
+                    return ['a','b','c'];<br>
+                }</li>
+                <li>let members = member();</li>
+                <li>members[0];</li>
+                <li>members[1];</li>
+                <li>members[2];</li>
+                <li>members.length</li>
+                <li>members[0].toUpperCase();</li>
+            <h4>配列+Loop</h4>    
+                <li>for(let i=0; i&lt;members.length; i++){}</li>
+                <li>members.push('d');</li>
+                <li>members.concat(['e','f']);</li>
+                <li>members.unshift('z');</li>
+                <li>members.splice(1,0,'d');</li>
+                <li>shift</li>
+                <li>pop</li>
+                <li>sort</li>
+                <li>reverse</li>
+            <h4>個体Object</h4>    
+                <li>let obj = {'a':10,'b':20,'c':'good'};</li>
+                <li>let abc = {};</li>
+                <li>let abc = new Object();</li>
+                <li>abc[a]=10;</li>
+                <li>abc[b]=20;</li>
+                <li>abc[c]='good';</li>
+                <li>abc.a=10;</li>
+                <li>abc.b=20;</li>
+                <li>abc.c='good';</li>
+            <h4>個体+for文</h4>    
+                <li>for(key in abc){<br>
+                    console.log(key,abc[key]);<br>
+                    }</li>
+            <h4>個体+個体+関数</h4>
+                <li>let obj = {<br>
+                    'list':{'a':10,'b':20,'c':'good'}<br>
+                    'fun': function(){}<br>
+                    }</li>
+                <li>obj['list']['a'];</li>
+                <li>obj['fun']();</li>
+                <li>obj.fun();</li>
+                <li>this.list</li>
+            <h4>module</h4>    
+                <li>&lt;head&gt;<br>
+                    &lt;script src = "javascript.js"&gt;&lt;/script&gt;
+                    &lt;head/&gt;</li>
+            <h4>library</h4>    
+                <li>必要な時使える関数やクラスたち</li>
+                <li>JQuery</li>
+                <li>Lodash</li>
+                <li>Axios</li>
+                <li>Moment.js</li>
+                <li>React</li>
+                <li>Vue.js</li>
+                <li>Express.js</li>
+                <li>Flask</li>
+                <li>Djangoなど</li>
+            <h4>UI and API</h4>
+                <li>User Interface</li>
+                <li>Application<br> 
+                    Programming<br> 
+                    Interface</li>
+            <h4>Regular Expression</h4>    
+                <li>let pattern = /a/;</li>
+                <li>let pattern = new RegExp('a');</li>
+                <li>RegExp.exec()</li>
+                <li>console.log(pattern.exec('abc'));</li>
+                <li>let pattern = /a./;</li>
+                <li>console.log(pattern.exec('abc'));</li>
+                <li>console.log(pattern.test('abc'));</li>
+                <li>string.match()</li>
+                <li>let str = 'abcdef';</li>
+                <li>console.log(str.match(pattern));</li>
+                <li>console.log(str.replace(pattern,'A'));</li>
+                <li>let xi = /a/i;</li>
+                <li>let xg = /a/g;</li>
+                <li>let ig = /a/ig;</li>
+            <h4>有効範囲</h4>    
+                <li>有効範囲(Scope)</li>
+                <li>変数の寿命</li>
+                <li>関数の外で宣言した変数</li>
+                <li>関数の中で宣言した変数</li>
+                <li>global variable</li>
+                <li>local variable</li>
+            <h4>callback関数</h4>    
+                <li>function a(){}</li>
+                <li>let a = function(){}</li>
+                <li>a = {<br>
+                    b:function(){}<br>
+                    }</li>
+                <li>function cal(func,num){<br>
+                    return func(num)<br>    
+                    }</li>
+                <li>function increase(num){<br>
+                    return num + 1<br>    
+                    }</li>
+                <li>function decrease(num){<br>
+                    return num -1<br>    
+                    }</li>
+                <li>cal(increase,1);</li>
+                <li>cal(decrease,1);</li>
+                <li>function cal(mode){<br>
+                        var func = {<br>
+                            'plus': function(left,right){<br>
+                                return left+right<br>
+                            }<br>
+                        }<br>
+                        return func[mode];<br>
+                    }</li>
+                <li>cal('plus')(2,1);</li>
+                <li>let process = [function(input){<br>
+                    return input + 10<br>
+                }]</li>
+                <li>process[0](1);</li>
+            <h4>callback function part2</h4>    
+                <li>let numbers = [20,10,9,8,7,6,5,4,3,2,1]</li>
+                <li>numbers.sort();</li>
+                <li>numbers.sort(function(a,b){<br>
+                    return a-b<br>
+                });</li>
+                <li>numbers.sort(function(a,b){<br>
+                    return b-a<br>
+                });</li>
+            <h4>asynchronous</h4>    
+                <li>ajax</li>
+            <h4>closure</h4>
+                <li>関数の中に関数</li>
+                <li>function outer(){<br>
+                        let title = 'welcome';<br>
+                        function inner(){<br>
+                            alert(title);<br>
+                    }<br>
+                    inner();<br>    
+                }<br>
+                outer();</li>
+            <h4>private variable</h4>    
+            <h4>arguments</h4>    
+                <li>function sum(){}</li>
+                <li>arguments.length</li>
+                <li>sum(1,2,3,4);</li>
+            <h4>function.apply();</h4>
+                <li>function sum(a,b){<br>
+                    return a+b<br>
+                }</li>
+                <li>sum(1,2);</li>
+                <li>sum.apply(null,[1,2])</li>
+            <h4>Object Oriented Programming</h4>    
+                <li>部品課</li>
+            <h4>生成者とnew</h4>    
+                <li>let person = {}</li>
+                <li>person.name = 'a';</li>
+                <li>person.introduce = function(){<br>
+                    return this.name;<br>    
+                }</li>
+                <li>person.introduce();</li>
+                <li>let person ={<br>
+                    'name':'a',<br>
+                    'introduce':function(){}<br>
+                }</li>
+            <h4>constructor</h4>    
+                <li>function person(){}</li>
+                <li>let p = new person();</li>
+                <li>console.log(p);</li>
+                <li>p = {}</li>
+                <li>p.name = 'a';</li>
+                <li>p.introduce = function(){}</li>
+                <li>function person(name){<br>
+                    this.name = name;<br>    
+                    this.introduce=function(){<br>
+                        return this.name;<br>
+                    }
+                }</li>
+                <li>let p1 = new person('a');</li>
+                <li>let p2 = new person('b');</li>
+            <h4>Global object</h4>    
+                <li>function func(){<br>
+                    console.log('hello');<br>
+                }</li>
+                <li>func();</li>
+                <li>window.func();</li>
+                <li>let o = {'func':function(){}}</li>
+                <li>o.func();</li>
+                <li>window.o.func();</li>
+            <h4>this</h4>    
+                <li>function func(){<br>
+                    if(window===this){<br>
+                        console.log("window===this")<br>
+                    }<br>    
+                }</li>
+                <li>func();</li>
+                <li>let o = {<br>
+                    func : function(){<br>
+                        if(o===this){<br>
+                            console.log("o===this")<br>
+                        }<br>
+                    }<br>
+                }</li>
+                <li>o.func();</li>
+            <h4>inheritance</h4>    
+                <li>function son(name){<br>
+                    this.name = name;<br>    
+                }</li>
+                <li>son.prototype.name=null;</li>
+                <li>son.prototype.introduce=function(){<br>
+                    return this.name;<br>    
+                }</li>
+                <li>function programmer(name){<br>
+                    this.name = name;<br>    
+                }</li>
+                <li>programmer.prototype = new son();</li>
+                <li>let p1 = new programmer('a');</li>
+                <li>programmer.prototype.coding=<br>
+                    function(){<br>
+                        return "hello world";<br>
+                    }</li>
+                <li>console.log(p1.introduce());</li>
+                <li>console.log(p1.coding());</li>
+            <h4>prototype</h4>    
+                <li>function ultra(){}<br>
+                    ultra.prototype.ultraProp=true;</li>
+                <li>function super(){}<br>
+                    super.prototype = new ultra();</li>
+                <li>function sub(){}<br>
+                    sub.prototype = new super();</li>
+                <li>let o = new sub();</li>
+                <li>console.log(o.ultraProp);</li>
+            <h4>Standard built-in Object</h4>    
+                <li>Object</li>
+                <li>Function</li>
+                <li>Array</li>
+                <li>String</li>
+                <li>Boolean</li>
+                <li>Number</li>
+                <li>Math</li>
+                <li>date</li>
+                <li>RegExp</li>
+                <li>let arr = new Array('a','b','c');</li>
+                <li>function getRandom(arr){<br>
+                    var index = Math.floor<br>
+                    (arr.length*Math.random());<br>
+                    return arr[index];<br>    
+                }</li>
+                <li>Array.prototype.Random = function(){<br>
+                    var index = Math.floor<br>
+                    (this.length*Math.random());<br>
+                    return this[index];<br>
+                }</li>
+                <li>let arr = new Array('a','b','c');</li>
+                <li>arr.random();</li>
+            <h4>Object of Object</h4>    
+                <li>Object.keys(obj)</li>
+                <li>Object.keys(arr)</li>
+                <li>Object.prototype.toString();</li>
+                <li>Object.prototype.contain = <br>
+                    function(objArr){<br>
+                    for(let name in this)<br>{
+                        if(this[name]===objArr){<br>
+                            return true;<br>
+                        }<br>
+                    }<br>
+                    return false;<br>
+                }</li>
+                <li>let o = {'name':'a','city':'b'}</li>
+                <li>console.log(o.contain('name'));</li>
+            <h4>Primitive data type</h4>    
+                <li>数字</li>
+                <li>文字列</li>
+                <li>Boolean</li>
+                <li>null</li>
+                <li>undefined</li>
+                <li>wrapper object</li>
+            <h4>reference</h4>    
+                <li>let a=1;</li>
+                <li>let b=a;</li>
+                <li>b=2;</li>
+                <li>console.log(a);</li>
+                <li>let a={'id':1}</li>
+                <li>let b=a;</li>
+                <li>b.id=2;</li>
+                <li>console.log(a.id);</li>
+                <li>let a={'id':1}</li>
+                <li>let b=a;</li>
+                <li>b ={'id':2};</li>
+                <li>console.log(a.id);</li>
+                <li>let a=1;</li>
+                <li>let b=a;</li>
+                <li>b=2;</li>
+                <li>console.log(a);</li>
+                <li>let a = 1;</li>
+                <li>function func(b){<br>
+                    b=2;<br>
+                }</li>
+                <li>func(a);</li>
+                <li>console.log(a);</li>
+                <li>let a = {'id':1};</li>
+                <li>function func(b){<br>
+                    b={'id':2};<br>
+                }</li>
+                <li>func(a);</li>
+                <li>console.log(a.id);</li>
+                <li>let a = {'id':1};</li>
+                <li>function func(b){<br>
+                    b.id=2;<br>
+                }</li>
+                <li>func(a);</li>
+                <li>console.log(a.id);</li>
             </ul>
             
         </main>
