@@ -23,7 +23,7 @@
             <li><a href="page_html.html"> HTML </a></li>
             <li><a href="page_css.html"> CSS </a></li>
             <li><a href="page_javascript2.html"> JavaScript</a></li>
-            <li><a href="page_javascript.html"> JavaScript-with nodejs </a></li>
+            <li><a href="page_javascript.html"> JavaScript-with Web </a></li>
             <li><a href="page_react.html"> React </a></li>
             <li><a href="page_nextjs.html"> Nextjs </a></li>
             <li><a href="page_nodejs.html"> Nodejs </a></li>
@@ -54,8 +54,154 @@
     </nav>
     
         <main>
-            <h2>JavaScript with Nodejs</h2>
+            <h2>JavaScript with Web</h2>
             <ul>
+            <h4>onclick</h4>
+                <li>&lt;body&gt;<br>
+                    &lt;input type="button"<br>onclick="alert('Hello')" value="Hello"&gt;<br>
+                    &lt;/body&gt;</li>
+                <li>&lt;input type="button"<br>id="h" value="Hello"&gt;<br></li>
+                <li>&lt;script&gt;<br>
+                    let h = document.getElementById('h');<br>
+                    h.addEventListener('click',function(){<br>
+                        alert('Hello');<br>
+                    }<br>)
+                    &lt;/script&gt;</li>
+            <h4>javascriptのfileを分離</h4>    
+                <li>&lt;body&gt;<br>
+                    &lt;script src="./script.js"&gt;&lt;/script&gt;
+                    &lt;/body&gt;</li>
+                <li>&lt;head&gt;<br>
+                    &lt;script src="./script.js"&gt;&lt;/script&gt;
+                    &lt;/head&gt;</li>
+            <h4>Browser Object Model</h4>    
+                <li>BOM</li>
+            <h4>window object</h4>    
+                <li>window.document</li>
+                <li>window.navigator</li>
+                <li>window.Object</li>
+                <li>window.alert();</li>
+                <li>alert();</li>
+                <li>let a = 1;</li>
+                <li>window.a</li>
+                <li>let b ={'id':1}</li>
+                <li>window.b</li>
+            <h4>相互作用</h4>    
+                <li>alert</li>
+                <li>confirm</li>
+                <li>prompt</li>
+            <h4>location</h4>    
+                <li>console.log(location.toString());</li>
+                <li>console.log(location.href);</li>
+            <h4>URL Parsing</h4>    
+                <li>location.protocol</li>
+                <li>location.host</li>
+                <li>location.port</li>
+                <li>location.search</li>
+                <li>location.hash</li>
+            <h4>URL 変更</h4>    
+                <li>location.href = 'http://google.com';</li>
+                <li>location = 'http://google.com';</li>
+                <li>location.reload();</li>
+                <li>location.href = location.href;</li>
+            <h4>navigator</h4>    
+                <li>console.dir(navigator);</li>
+                <li>console.dir(navigator.appName);</li>
+                <li>console.dir(navigator.appVersion);</li>
+                <li>console.dir(navigator.userAgent);</li>
+                <li>console.dir(navigator.platform);</li>
+            <h4>window object</h4>    
+                <li>window.open('index.html');</li>
+                <li>window.open('index.html','_self');</li>
+                <li>window.open('index.html','_blank');</li>
+                <li>window.open('index.html','ot');</li>
+                <li>window.open('index.html','blank',<br>'width=200','resizable=yes');</li>
+            <h4>制御対象探し</h4>    
+                <li>document.<br>getElementsByTagName('h1');</li>
+                <li>let h1 =<br>getElementsByTagName('h1');</li>
+                <li>h1.style.color='red';</li>
+                <li>let ul =<br>document.<br>getElementsByTagName('ul')[0];</li>
+                <li>let li =<br>ul.document.<br>getElementsByTagName('li');</li>
+                <li>li.style.color='red';</li>
+                <li>document.<br>getElementsByClassName('name');</li>
+                <li>document.<br>getElementsById('idName');</li>
+                <li>let h1=document.querySelector('h1');</li>
+                <li>h1.style.color='red';</li>
+                <li>document.querySelector('.active');</li>
+                <li>document.querySelectorAll('h1');</li>
+            <h4>HTMLElement</h4>    
+                <li>let h1=document.getElementsById('h1');</li>
+                <li>console.log(h1.constructor.name);</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            <h2>JavaScript with Nodejs</h2>    
                 <li>var </li>
                 <li>let</li>
                 <li>const</li>
