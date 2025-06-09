@@ -65,7 +65,7 @@
                     let h = document.getElementById('h');<br>
                     h.addEventListener('click',function(){<br>
                         alert('Hello');<br>
-                    }<br>)
+                    })<br>
                     &lt;/script&gt;</li>
             <h4>javascriptのfileを分離</h4>    
                 <li>&lt;body&gt;<br>
@@ -124,46 +124,85 @@
                 <li>let li =<br>ul.document.<br>getElementsByTagName('li');</li>
                 <li>li.style.color='red';</li>
                 <li>document.<br>getElementsByClassName('name');</li>
-                <li>document.<br>getElementsById('idName');</li>
+                <li>document.<br>getElementById('idName');</li>
                 <li>let h1=document.querySelector('h1');</li>
                 <li>h1.style.color='red';</li>
                 <li>document.querySelector('.active');</li>
                 <li>document.querySelectorAll('h1');</li>
             <h4>HTMLElement</h4>    
-                <li>let h1=document.getElementsById('h1');</li>
-                <li>console.log(h1.constructor.name);</li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>let id=document.<br>getElementById('id');</li>
+                <li>console.log(id.constructor.name);</li>
+                <li>HTMLElement</li>
+                <li>let li=document.<br>getElementsByTagName('li');</li>
+                <li>console.log(li.constructor.name);</li>
+                <li>HTMLCollection</li>
+                <li>&lt;li id='list'&gt;&lt;/li&gt;</li>
+                <li>document.getElementById('list');</li>
+                <li>&lt;a id='anchor' href=''&gt;</li>
+                <li>document.getElementById('anchor');</li>
+                <li>&lt;input type='button' id='button'&gt;</li>
+                <li>document.getElementById('button');</li>
+            <h4>DOM Tree</h4>    
+                <li>Node</li>
+                <li>Document-HTMLDocument<br></li>
+                <li>CharacterData-Text,Comment</li>
+                <li>Element-HTMLElement-Head,Body..</li>
+                <li>Attr</li>
+            <h4>HTMLCollection</h4>    
+                <li>console.group('before');</li>
+                <li>console.groupEnd();</li>
+                <li>console.group('after');</li>
+                <li>console.groupEnd();</li>
+                <li>parentNode.removeChild();</li>
+            <h4>Element Object</h4>
+                <li>Element.classList</li>
+                <li>Element.className</li>
+                <li>Element.id</li>
+                <li>Element.getElementsByClassName</li>
+                <li>Element.getElementsByTagName</li>
+                <li>Element.querySelector</li>
+                <li>Element.querySelectorAll</li>
+                <li>Element.getAttribute(name)</li>
+                <li>Element.setAttribute(name,value)</li>
+                <li>Element.hasAttribute(name)</li>
+                <li>Element.removeAttribute(name)</li>
+            <h4>識別者API</h4>    
+                <li>&lt;li id='active'&gt;&lt;/li&gt;</li>
+                <li>document.<br>getElementById('active').tagName</li>
+            <h4>Element.id</h4>    
+                <li>&lt;li id='active'&gt;&lt;/li&gt;</li>
+                <li>let active=<br>
+                    document.getElementById('active');</li>
+                <li>console.log(active.id);</li>
+                <li>active.id='inactive'</li>
+                <li>console.log(active.id);</li>
+            <h4>Element.className</h4>    
+                <li>active.className="important";</li>
+            <h4>Element.classList</h4>    
+                <li>active.classList.toggle('important')</li>
+            <h4>照会API</h4>    
+                <li>document.getElementBy*</li>
+                <li>list.textContent</li>
+            <h4>属性API</h4>    
+                <li>attribute</li>
+                <li>anchor.getAttribute('href');</li>
+                <li>anchor.getAttribute('id');</li>
+                <li>anchor.id</li>
+                <li>anchor.setAttribute('id','anchor2');</li>
+                <li>anchor.setAttribute('title','link');</li>
+                <li>anchor.removeAttribute('title');</li>
+                <li>anchor.hasAttribute('title');</li>
+            <h4>attribute or property</h4>
+                <li>anchor.setAttribute('class','A');</li>
+                <li>anchor.ClassName = 'A';</li>
+                <li>class => className</li>
+                <li>readonly => readOnly</li>
+                <li>rowspan => rowSpan</li>
+                <li>colspan => colSpan</li>
+                <li>usemap => useMap</li>
+                <li>frameborder => frameBorder</li>
+                <li>for => htmlFor</li>
+                <li>maxlength => maxlength</li>
                 <li></li>
                 <li></li>
                 <li></li>
