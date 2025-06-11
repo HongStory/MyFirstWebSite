@@ -202,7 +202,160 @@
                 <li>usemap => useMap</li>
                 <li>frameborder => frameBorder</li>
                 <li>for => htmlFor</li>
-                <li>maxlength => maxlength</li>
+                <li>maxlength => maxLength</li>
+            <h4>Node Object</h4>    
+                <li>最上位個体</li>
+                <li>Node.chidNodes</li>
+                <li>Node.firstChild</li>
+                <li>Node.lastChild</li>
+                <li>Node.nextSibling</li>
+                <li>Node.previousSibling</li>
+                <li>Node.contains()</li>
+                <li>Node.hasChildNodes()</li>
+                <li>Node.nodeType</li>
+                <li>Node.nodeName</li>
+                <li>Node.nodeValue</li>
+                <li>Node.textContent</li>
+                <li>Node.appendChild()</li>
+                <li>Node.removeChild()</li>
+            <h4>Node関係API</h4>    
+                <li>let start=<br>document.getElementById('start');</li>
+                <li>start.firstChild</li>
+                <li>#text</li>
+                <li>start.firstChild.nextSibling</li>
+                <li>start.firstChild.nextSibling.nextSibling</li>
+                <li>start.firstChild.nextSibling.<br>nextSibling.previousSibling</li>
+                <li>start.firstChild.nextSibling.<br>
+                    nextSibling.previousSibling.<br>
+                    previousSibling.parentNode</li>
+            <h4>Node種類API</h4>    
+                <li>Node.nodeType</li>
+                <li>Node.nodeName</li>
+                <li>for(let name in Node){<br>
+                    console.log(name,Node[name]);<br>    
+                }</li>
+            <h4>Nodeの変更</h4>    
+                <li>appendChild(child)</li>
+                <li>insertBefore(newElement,<br>referenceElement)</li>
+                <li>document.createElement(tagname)</li>
+                <li>document.createTextNode(data)</li>
+            <h4>Nodeの除去</h4>
+                <li>t.parentNode.removeChild(target);</li>
+                <li>t.replaceChild(t,target.firstChild);</li>
+            <h4>Document Object</h4>
+                <li>window.document/li>
+                <li>document.childNodes[0]</li>
+                <li>document.childNodes[1]</li>
+                <li>let li=document.createElement('li')</li>
+                <li>console.log(li);</li>
+                <li>document.title</li>
+            <h4>Text Object</h4>    
+                <li>&lt;p&gt;Text Object&lt;p&gt;</li>
+                <li>TagとTagの間の空白もText Object</li>
+                <li>&lt;p id='id'&gt;Text Object&lt;p&gt;</li>
+                <li>let t = document.<br>getElementById('id').firstChild</li>
+                <li>console.log(t.nodeValue);</li>
+                <li>console.log(t.data);</li>
+                <li>t.nodeValue='newValue';</li>
+                <li>t.appendData(value)</li>
+                <li>t.deleteData(start5,end5)</li>
+                <li>t.insertData(start5,value)</li>
+                <li>t.replaceData(start5,end5,value)</li>
+                <li>t.substringData(start5,end5)</li>
+            <h4>Elementの大きさ</h4>    
+                <li>t.getBoundingClientRect()</li>
+                <li>t.offsetParent</li>
+            <h4>Viewport</h4>    
+                <li>setInterval();</li>
+                <li>window.pageYOffset</li>
+            <h4>Scroll制御</h4>    
+                <li>window.scrollTo(x,y);</li>
+                <li>window.scrollTo(0,0);</li>
+            <h4>Screenの大きさ</h4>    
+                <li>window.innerWidth</li>
+                <li>window.innerHeight</li>
+                <li>screen.width</li>
+                <li>screen.height</li>
+            <h4>event</h4>    
+                <li>&lt;input type="button"<br> 
+                    onclick="alert(window.location)"<br>
+                    value="alert(window.href)"/&gt;</li>
+                <li>&lt;input type="button"<br> 
+                    onclick="window.open('bom.html')"<br>
+                    value="window.open('bom.html')"/&gt;</li>
+                <li>&lt;input type="text"<br> 
+                    onchange="alert(this.value)"/&gt;</li>
+            <h4>inline</h4>    
+                <li>Tagの中にeventが入ってる方式</li>
+            <h4>property listener</h4>
+                <li>&lt;input type="button" id="id"<br> value="button"/&gt;</li>
+                <li>let t=document.getElementById('id');</li>
+                <li>&lt;script&gt;<br>
+                    t.onclick = function(){<br>
+                        alert('Hello');<br>
+                    }<br>
+                    &lt;/script&gt;</li>
+                <li>&lt;script&gt;<br>
+                    t.onclick = function(event){<br>
+                        alert(event.target.value);<br>
+                    }<br>
+                    &lt;/script&gt;</li>
+                <li>consol.dir(event);</li>
+                <li>consol.dir(window.event);</li>
+                <li>t.onclick = function(event){<br>
+                    let event = event || window.event;<br>
+                    console.log(event.target)<br>
+                }<br></li>
+            <h4>addEventListener()</h4>
+                <li>&lt;input type="button" id="id"<br> value="button"/&gt;</li>
+                <li>let t=document.getElementById('id');</li>
+                <li>&lt;script&gt;<br>
+                    t.addEventListener('click',<br>
+                    function(event){<br>
+                        alert('Hello');<br>
+                    });<br>
+                    &lt;/script&gt;</li>    
+            <h4>Event Propagation</h4>    
+                <li>Capturing Phase</li>
+                <li>Bubbling Phase</li>
+                <h4>基本動作の取り消し</h4>
+                <li>inline</li>
+                <li>&lt;input type="checkbox" id="prevent"<br> name="eventPrevent"value="on"/&gt;</li>    
+                <li>onclick="if(document.getElementById<br>('prevent').checked) return false;"</li>
+                <li>onsubmit="if() return false;"</li>
+                <li>property listener</li>
+                <li>document.querySelector('a').onclick=<br>
+                    function (event){<br>
+                    if(document.getElementById<br>('prevent').checked)<br>
+                        return false;<br>
+                    }</li>
+                <li>addEventListener()</li>
+                <li>document.querySelector('a').<br>addEventListener('click',<br>
+                    function (event){<br>
+                    if(document.getElementById<br>('prevent').checked)<br>
+                        event.preventDefault();<br>
+                    });</li>
+            <h4>Form</h4>    
+                <li>&lt;form id="id" action="result.html"/><br>
+                    &lt;label for="name">name&lt;/label><br>
+                    &lt;input id="name" type="name"/><br>
+                    &lt;input type="submit"/><br>
+                    &lt;/form>
+                </li>
+                <li>&lt;script&gt;<br>
+                <li>let t=document.getElementById('id');</li>
+                    t.addEventListener('submit',<br>
+                    function(event){<br>
+                        if(document.getElementById('name').<br>value.length===0){<br>
+                            alert('一文字以上入力してください');<br>
+                            event.preventDefault();<br>
+                        }<br>
+                    });<br>
+                    &lt;/script&gt;</li>
+                <li>addEventListener<br>('change',function(){});</li>
+                <li>addEventListener<br>('blur',function(){});</li>
+                <li>addEventListener<br>('focus',function(){});</li>
+                <li></li>
                 <li></li>
                 <li></li>
                 <li></li>
