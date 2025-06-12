@@ -55,7 +55,8 @@
     </nav>
     
         <main>
-            <h2>JavaScript with Nodejs</h2>    
+            <h2>JavaScript with Nodejs</h2>  
+            <ul>  
                 <li>var </li>
                 <li>let</li>
                 <li>const</li>
@@ -72,11 +73,9 @@
                 <li>==,===,=>,=&lt;,>,&lt;,</li>
                 <li>if(true|false){console.log('TRUE');}</li>
                 <li>else{console.log('FALSE');}</li>
-
             <h3>Loop</h3>
                 <li>var i = 0;</li>
                 <li>while(i < 5){console.log('A'); i = i + 1;}</li>
-            
             <h3>Array</h3>
                 <li>var arr = ['A', 'B', 'C'];</li>
                 <li>console.log(arr[0]);</li>
@@ -85,7 +84,6 @@
                 <li>arr[2] = 3;</li>
                 <li>console.log(arr.length);</li>
                 <li>arr.push('D');</li>
-            
             <h3>Loop + Array</h3>
                 <li>var arr = [1, 2, 3];</li>
                 <li>var i = 0;</li>
@@ -94,8 +92,7 @@
                 <li>var total = 0;</li>
                 <li>total = total + arr[i];</li>
                 <li>console.log(total);</li>
-                
-                <h3>function</h3>
+            <h3>function</h3>
                 <li>function fun(){}</li>
                 <li>fun();</li>
                 <li>Math.round();</li>
@@ -114,22 +111,19 @@
                 <li>return => function over</li>
                 <li>함수로 중복된 코드를 묶어서 정리</li>
                 <li>関数で被っているコードを纏める</li>
-                <h3>Callback function</h3>
+            <h3>Callback function</h3>
                 <li>function a(){}</li>
                 <li>var a = function (){}</li>
                 <li>a();</li>
                 <li>function b(callback){callback();}</li>
                 <li>b(a);</li>
-
-                <h3>Object</h3>
+            <h3>Object</h3>
                 <li>var obj = {'programmer':'tom',<br>'designer':'kim','manager':'suzuki'}</li>
                 <li>console.log(obj.programmer);</li>
                 <li>console.log(obj['programmer']);</li>
-
-                <h3>Object & Loop</h3>
+            <h3>Object & Loop</h3>
                 <li>for(var i in obj){console.log(i,obj[i]);}</li>
-
-                <h3>Object Oriented Programming</h3>
+            <h3>Object Oriented Programming</h3>
                 <li>var f = function(){}</li>
                 <li>console.log(f);</li>
                 <li>f();</li>
@@ -137,8 +131,7 @@
                 <li>a[0]();</li>
                 <li>var obj = {func:f}</li>
                 <li>obj.func();</li>
-                 
-                <h3>this</h3>
+            <h3>this</h3>
                 <li>var obj={a:b,c:d}</li>
                 <li>function f1(){console.log(obj.a)}</li>
                 <li>function f2(){console.log(obj.c)}</li>
@@ -148,9 +141,8 @@
                 f1:function(){console.log(obj.a)},<br>
                 f2:function(){console.log(this.c)}}</li>
                 <li>obj.f1();</li>
-                <li>obj.f2();</li>
-
-                <h3>Module</h3>
+                <li>obj.f2();</li>                
+            <h3>Module</h3>
                 <li>var mod={a:'b',<br>f:function(){console.log(this.a)}}</li>
                 <li>module.exports = mod;</li>
                 <li>var mod = require('./filename.js')</li>
