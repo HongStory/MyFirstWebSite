@@ -57,7 +57,7 @@
         </ol>
     </nav>
     
-         <main>
+        <main>
             
             <h2>PHP</h2>
             <ul>
@@ -88,21 +88,48 @@
             <h4>URL parameter</h4>    
                 <li>index.php?name=eve;</li>
                 <li>&lt;?php echo $_GET['name']; ?></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>index.php?id=eve;</li>
+                <li>&lt;?php echo $_GET['id']; ?></li>
+            <h4>内蔵function</h4>    
+                <li>strlen();</li>
+                <li>nl2br();</li>
+                <li>var_dump();</li>
+                <li>$contents = "data/".$_GET['id'];</li>
+                <li>echo file_get_contents($contents);</li>
+            <h4>if</h4>    
+                <li>if(isset($_GET['id'])){}</li>
+            <h4>Loop</h4>    
+                <li>$list = scandir('data');</li>
+                <li>count($list)</li>
+            <h4>user-defined-functions</h4>    
+                <li>function basic(){<br>
+                        print("hello");<br>
+                    }<br>
+                    basic();</li>
+                <li>parameter and argument</li>
+                <li>function sum($a,$b){<br>
+                        print($a+$b);<br>
+                    }<br>
+                    sum(1,3);</li>
+                <li>file_put_contents('result.txt',sum(1,3));</li>
+                <li>function sum($a,$b){<br>
+                        return $a+$b;ここで終了される<br>
+                        echo 'result';これは無視される<br>
+                    }<br>
+                    sum(1,3);</li>
+                <li>重複されているコードを整理できる</li>
+            <h4>コメント追加</h4>    
+                <li>form action="fi.php" method="get"</li>
+                <li>file_put_contents(<br>
+                    'data/'.$_GET['title'],<br>
+                    $_GET['description']);</li>
+                <li>form action="fi.php" method="post"</li>
+                <li>file_put_contents(<br>
+                    'data/'.$_POST['title'],<br>
+                    $_POST['description']);</li>
+            <h4>redirection</h4>    
+                <li>header('URL')</li>
+            <h4>内容修正</h4>    
                 <li></li>
                 <li></li>
                 <li></li>
