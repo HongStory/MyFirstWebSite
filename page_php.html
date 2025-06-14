@@ -130,106 +130,32 @@
             <h4>redirection</h4>    
                 <li>header('URL')</li>
             <h4>内容修正</h4>    
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>&lt;?php<br>
+                    if(isset($_GET['id'])){ ?><br>
+                    &lt;a href="update.php?id=<br>&lt;?php echo $_GET['id'];?>">update&lt;/a><br>
+                    &lt;?php } ?></li>
+                <li>&lt;input value=&lt;?php print_title();?>></li>
+                <li>&lt;input type="hidden" name="old_title"<br> value="&lt;?=$_GET['id']?>"></li>
+                <li>rename('data/'.$_POST['old_title'],<br> 'data/'.$_POST['title']);</li>
+                <li>file_put_contents(<br>'data/'.$_POST['title'],<br> $_POST['description']);</li>
+                <li>header('Location: /firstweb/<br>index.php?id='.$_POST['title']);</li>
+            <h4>削除</h4>    
+                <li>&lt;form action="delete_process.php"<br> method="post"><br>
+                &lt;input type="hidden" name="id"<br> value="&lt;?php echo $_GET['id']?>"><br>
+                &lt;input type="submit" value="delete"><br>
+                &lt;/form></li>
+            <h4><a href="https://github.com/SuaStory/php">ここまでのコード</a></h4>    
+            <h4>reFactory</h4>    
+            <li>module</li>
+            <li>require('dir/');</li>
+            <li>require_once('dir/');</li>
+            <h4>Security</h4>    
+            <li>Cross Site Scripting</li>
+            <li>XSS</li>
+            <li>htmlspecialchars();</li>
+            <li>basename();</li>
+            <h4>完成コード</h4>    
+            <h4><a href="https://github.com/SuaStory/phpreFactory">リンク</a></h4>    
             </ul>
                 
             
